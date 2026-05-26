@@ -1,0 +1,142 @@
+/* Javis — AI보안 동향 리포트 사이트 스타일 */
+
+:root {
+  --c-bg: #fafbfc;
+  --c-surface: #ffffff;
+  --c-border: #d0d7de;
+  --c-text: #1f2328;
+  --c-muted: #57606a;
+  --c-accent: #2563eb;
+  --c-accent-soft: #eef2ff;
+  --c-daily: #0ea5e9;
+  --c-weekly: #8b5cf6;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  font-family: -apple-system, "Segoe UI", "Apple SD Gothic Neo",
+               "Malgun Gothic", "Noto Sans KR", system-ui, sans-serif;
+  font-size: 16px; line-height: 1.65; color: var(--c-text);
+  background: var(--c-bg); margin: 0;
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+
+/* ---- 사이트 헤더 ---- */
+.site-header {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  color: white; padding: 24px 20px;
+}
+.site-header .wrap { max-width: 860px; margin: 0 auto; }
+.site-header h1 {
+  margin: 0; font-size: 1.7em; letter-spacing: -0.02em;
+  display: flex; align-items: center; gap: 10px;
+}
+.site-header .tag { font-size: 0.92em; opacity: 0.9; margin-top: 4px; }
+.site-header a { color: white; text-decoration: none; }
+
+/* ---- 페이지 컨테이너 ---- */
+.container { max-width: 860px; margin: 0 auto; padding: 28px 20px 80px; }
+
+/* ---- 인덱스 페이지 카드 ---- */
+.section-title {
+  font-size: 1.15em; margin: 1.5em 0 0.6em;
+  display: flex; align-items: center; gap: 8px;
+}
+.badge {
+  display: inline-block; font-size: 0.72em; font-weight: 600;
+  padding: 2px 8px; border-radius: 999px; color: white;
+  letter-spacing: 0.02em;
+}
+.badge.daily { background: var(--c-daily); }
+.badge.weekly { background: var(--c-weekly); }
+
+.report-list { list-style: none; padding: 0; margin: 0; }
+.report-list li {
+  background: var(--c-surface); border: 1px solid var(--c-border);
+  border-radius: 8px; padding: 14px 16px; margin-bottom: 10px;
+  transition: all 0.15s ease;
+}
+.report-list li:hover { border-color: var(--c-accent); transform: translateY(-1px); }
+.report-list a { color: var(--c-text); text-decoration: none; display: block; }
+.report-list .meta { color: var(--c-muted); font-size: 0.85em; margin-top: 4px; }
+.report-list .title { font-weight: 600; }
+
+/* ---- 리포트 본문 ---- */
+.report-nav { margin-bottom: 1em; }
+.report-nav a {
+  color: var(--c-accent); text-decoration: none; font-size: 0.92em;
+}
+.report-nav a:hover { text-decoration: underline; }
+
+.report-actions {
+  display: flex; gap: 8px; align-items: center;
+  padding: 12px 0; margin: 0.5em 0 1em;
+  border-top: 1px solid var(--c-border);
+  border-bottom: 1px solid var(--c-border);
+}
+.btn-kakao {
+  background: #fee500; color: #3c1e1e; border: none;
+  padding: 8px 14px; border-radius: 6px; font-weight: 600;
+  cursor: pointer; font-size: 0.92em;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.btn-kakao:hover { filter: brightness(0.95); }
+.btn-kakao[hidden] { display: none; }
+.btn-copy {
+  background: var(--c-accent-soft); color: var(--c-accent);
+  border: 1px solid var(--c-accent); padding: 8px 14px;
+  border-radius: 6px; font-size: 0.92em; cursor: pointer;
+}
+
+h1, h2, h3, h4 { line-height: 1.3; margin-top: 1.6em; margin-bottom: 0.5em; }
+h1 { font-size: 1.7em; border-bottom: 2px solid var(--c-border); padding-bottom: 0.25em; }
+h2 { font-size: 1.35em; border-bottom: 1px solid var(--c-border); padding-bottom: 0.2em; }
+h3 { font-size: 1.15em; }
+h4 { font-size: 1.02em; color: #24292f; }
+blockquote {
+  border-left: 4px solid var(--c-accent); background: var(--c-accent-soft);
+  margin: 1em 0; padding: 0.6em 1em; color: #1e3a8a;
+}
+a { color: var(--c-accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code {
+  background: #f6f8fa; padding: 0.15em 0.35em; border-radius: 4px;
+  font-size: 0.92em; font-family: "SFMono-Regular", Consolas, monospace;
+}
+pre { background: #f6f8fa; padding: 12px 14px; border-radius: 6px; overflow-x: auto; }
+pre code { background: transparent; padding: 0; }
+table { border-collapse: collapse; margin: 1em 0; width: 100%; display: block; overflow-x: auto; }
+th, td { border: 1px solid var(--c-border); padding: 6px 12px; text-align: left; }
+th { background: #f6f8fa; font-weight: 600; }
+ul, ol { padding-left: 1.6em; }
+hr { border: none; border-top: 1px solid var(--c-border); margin: 1.5em 0; }
+img { max-width: 100%; height: auto; }
+
+/* ---- Giscus 댓글 영역 ---- */
+.comments-section {
+  margin-top: 3em; padding-top: 1em;
+  border-top: 1px solid var(--c-border);
+}
+.comments-section h2 { font-size: 1.1em; margin-bottom: 0.8em; }
+.comments-disabled {
+  background: #fff7ed; color: #9a3412; border: 1px solid #fed7aa;
+  padding: 12px 14px; border-radius: 6px; font-size: 0.9em;
+}
+
+/* ---- 푸터 ---- */
+.site-footer {
+  text-align: center; color: var(--c-muted);
+  font-size: 0.85em; padding: 24px 20px;
+  border-top: 1px solid var(--c-border);
+}
+
+/* ---- 모바일 ---- */
+@media (max-width: 600px) {
+  body { font-size: 15px; }
+  .container { padding: 18px 14px 60px; }
+  .site-header { padding: 20px 14px; }
+  .site-header h1 { font-size: 1.4em; }
+  h1 { font-size: 1.4em; }
+  h2 { font-size: 1.18em; }
+}

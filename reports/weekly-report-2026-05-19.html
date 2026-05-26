@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="AI보안산업 주간 동향 리포트 (2026-05-19) — Javis">
+<title>AI보안산업 주간 동향 리포트 (2026-05-19) · Javis</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <h1><a href="../index.html">🛡️ Javis</a></h1>
+    <div class="tag">AI보안 동향 리포트 — 매일·매주 자동 발행</div>
+  </div>
+</header>
+
+<main class="container">
+  <div class="report-nav"><a href="../index.html">← Javis 목록으로</a></div>
+
+  <div>
+    <span class="badge weekly">위클리</span>
+    <span style="color:var(--c-muted); font-size:0.9em; margin-left:6px;">2026-05-19</span>
+  </div>
+
+  <div class="report-actions">
+    <button type="button" id="btn-kakao-share" class="btn-kakao">💬 카카오톡 공유</button>
+    <button type="button" id="btn-copy-url" class="btn-copy">링크 복사</button>
+  </div>
+
+  <article class="report-body">
+<h1 id="ai-2026-05-19">AI보안산업 주간 동향 리포트 (2026-05-19)</h1>
+<blockquote>
+<p><strong>수집 기간</strong>: 2026-05-12 ~ 2026-05-19
+<strong>수집 방식</strong>: 웹 검색 단일 출처 (지정 RSS·정책기관 피드 미설정 — 본 리포트의 핵심 한계)
+<strong>환율 기준</strong>: KRW/USD = 1,446원 (2026-05-19 한국은행 매매기준율)
+<strong>카테고리 범위</strong>: 정책·규제 / 산업·시장 / <strong>해외 동향</strong> / <strong>기술·위협</strong>(정책·산업 맥락 한정)</p>
+</blockquote>
+<h2 id="1">1. 이번 주 요약</h2>
+<p>이번 주는 4월 'Claude Mythos(미토스) 쇼크'에 대한 <strong>정부 대응이 정책 산출물로 수렴되는 국면</strong>이다.
+- 과기정통부, 5/11 앤스로픽 · 5/18 OpenAI 실무협의 → 5월 말 'AI 사이버 보안 대응 방향' 공개 예정
+- KISA, 정보보호 신기술 지원사업 50개사·18개 과제·120억 원(약 830만 USD) 확정
+- 정책(위협 대응)과 산업(진흥·시장 확대)이 같은 'AI 보안' 의제로 동시 진행</p>
+<h2 id="2">2. 핵심 타임라인 (한눈에)</h2>
+<table>
+<thead>
+<tr>
+<th>일자</th>
+<th>사건</th>
+<th>카테고리</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>04-07</td>
+<td>앤스로픽 Claude Mythos Preview 공개 — AI 자율 취약점 발견 사례 발표</td>
+<td>기술·위협</td>
+</tr>
+<tr>
+<td>05-08</td>
+<td>KISA 지원사업 50개사·120억 원 본격 착수</td>
+<td>산업</td>
+</tr>
+<tr>
+<td>05-08</td>
+<td>과기정통부 산학연 간담회 (배경훈 부총리)</td>
+<td>정책</td>
+</tr>
+<tr>
+<td>05-11</td>
+<td>과기정통부 ↔ 앤스로픽 실무 면담</td>
+<td>정책</td>
+</tr>
+<tr>
+<td>05-18</td>
+<td>과기정통부 ↔ OpenAI(사샤 베이커) 워크숍</td>
+<td>정책</td>
+</tr>
+<tr>
+<td><strong>05-말</strong></td>
+<td><strong>과기정통부 'AI 사이버 보안 대응 방향' 공식 발표 예정</strong></td>
+<td><strong>정책</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="3">3. 주목 이슈 하이라이트</h2>
+<h3 id="ai-5">🔹 미토스 쇼크 대응 — 과기정통부 'AI 사이버 보안 대응 방향' 5월 말 발표 예정</h3>
+<ul>
+<li><strong>무슨 일</strong>: 앤스로픽 Claude Mythos Preview가 다수 고위험 취약점을 발견(상세는 부록 A 각주1 참조)하면서 'AI가 공격자 도구' 시나리오가 현실화. 과기정통부는 산학연 간담회(5/8) → 앤스로픽 면담(5/11) → OpenAI 워크숍(5/18)을 거쳐 5월 말 공식 대응 방향을 발표한다.</li>
+<li><strong>왜 우리 팀이 주목</strong>: 5월 말 발표 내용이 향후 국내 AI보안 정책·실태평가·지원사업 기준선이 될 가능성.</li>
+<li><strong>&gt; 우리 팀 To-Do</strong>:</li>
+<li>발표 직후 24시간 내 정책 요지·KISA/진흥팀 영향 1페이지 회람</li>
+<li>발표 키워드(자율 발견·CISO 책임·기업 의무)별 진흥 사업 RFP 영향 매트릭스 작성</li>
+<li><strong>신뢰도</strong>: 일정·기관명 ★★★★ (Seoul Economic Daily 등 복수 보도) / 미토스 위협 서술 ★★★ (자율 발견 논란은 부록 A 검증 이력 참조)</li>
+<li><strong>원문</strong>: <a href="https://www.sedaily.com/article/20036606">서울경제 '미토스 사태 긴급 대응'</a> · <a href="https://en.sedaily.com/technology/2026/05/18/korea-expands-ai-security-talks-to-openai-after-anthropic">Seoul Economic Daily, Korea expands AI security talks to OpenAI</a> · <a href="https://m.news.nate.com/view/20260508n23996">네이트뉴스 '이달 말 AI 보안 대책 발표'</a></li>
+</ul>
+<h3 id="kisa-2026-120-50">🔹 KISA 2026 정보보호 신기술 지원사업 — 120억 원·50개사 확정</h3>
+<ul>
+<li><strong>무슨 일</strong>: KISA·과기정통부, '2026년 정보보호 신기술 지원사업' 50개사·18개 과제 확정 (5/8 본격 착수).</li>
+<li>예산: <strong>120억 원</strong> (약 830만 USD, 환율 1,446원 기준일 2026-05-19)</li>
+<li>4개 분야: ① AI 기반 보안제품 상용화 ② AI 보안기업 육성 (시제품 5건+제품화/실증 4건=총 9개 과제) ③ 한국형 모델 통합보안 ④ 제로트러스트</li>
+<li>확인 컨소시엄: 샌즈랩(자동 위협탐지 플랫폼), 쿠도커뮤니케이션(통합 물리보안 관제)</li>
+<li><strong>왜 우리 팀이 주목</strong>: 정부가 'AI 보안 산업 육성'에 직접 예산 배정한 사례. 4개 지원 분야가 국내 AI보안 시장 수요·경쟁 지형 지표.</li>
+<li><strong>&gt; 우리 팀 To-Do</strong>:</li>
+<li>50개사 전체 명단 확보 → 진흥팀 DB 입력 (KISA 측 자료요청 권장)</li>
+<li>4개 분야별 시제품 단계 기업 매핑 → 차년도 사업 RFP 설계 참고</li>
+<li>샌즈랩·쿠도 컨소시엄 모델을 차년도 컨소시엄 가이드라인 참조 사례로 활용</li>
+<li><strong>신뢰도</strong>: ★★★★★ (Korea Times·데일리시큐·헤럴드경제 3개 매체 교차 확인)</li>
+<li><strong>원문</strong>: <a href="https://www.koreatimes.co.kr/southkorea/20260508/govt-launches-83-mil-ai-cybersecurity-program-selects-50-firms">Korea Times, Gov't launches $8.3 mil. AI cybersecurity program</a> · <a href="https://www.dailysecu.com/news/articleView.html?idxno=206635">데일리시큐</a> · <a href="https://biz.heraldcorp.com/article/10733434">헤럴드경제</a></li>
+</ul>
+<h2 id="4">4. 카테고리별 동향</h2>
+<h3 id="_1">정책·규제</h3>
+<ul>
+<li><strong>과기정통부 ↔ OpenAI AI 보안 실무 워크숍</strong> (Seoul Economic Daily, 2026-05-18) — 외교부·국정원·금융위·국가AI전략위·AI안전연구소·KISA·금융보안원 등 범부처 참여. "AI 시대 사이버 위협 대응에는 민관 긴밀 협력 필수" 공통 인식 확인. <a href="https://en.sedaily.com/technology/2026/05/18/korea-expands-ai-security-talks-to-openai-after-anthropic">링크</a></li>
+<li><strong>과기정통부 산학연 간담회 — 배경훈 부총리</strong> (네이트뉴스, 2026-05-08) — 미토스발 위협 현장 의견 수렴. 5월 말 'AI 사이버 보안 대응 방향' 공개 예정. <a href="https://news.nate.com/view/20260508n17445">링크</a></li>
+<li><strong>(해외) 글로벌 보안 당국 자율형(에이전틱) AI 도입 가이드라인 발표</strong> (보안뉴스, 발행일 미확인) — <em>low_confidence</em>: 발표 주체·정확한 일자 차주 추적 필요. <a href="https://www.boannews.com/media/view.asp?idx=143540&amp;kind=4">링크</a></li>
+</ul>
+<h3 id="_2">산업·시장</h3>
+<ul>
+<li><strong>KISA 정보보호 신기술 지원사업 50개사</strong> — 하이라이트 2 참조.</li>
+<li><strong>'AI 안전, 한국은 준비됐나' 진단</strong> (Seoul Economic Daily, 2026-05-18) — <em>분석·오피니언 성격</em>: 미토스 쇼크 계기 국내 AI 안전·보안 대응 역량 점검. 민관 협력 체계·산업 대비 수준 문제 제기. <a href="https://en.sedaily.com/finance/2026/05/18/ai-safety-is-korea-ready">링크</a></li>
+</ul>
+<h3 id="_3">해외 동향 (고정 섹션)</h3>
+<blockquote>
+<p><strong>이번 주 수집 결과: EU·미·일·중 권역별 1차 출처 0건.</strong></p>
+<p>보안뉴스 1건이 '글로벌 보안 당국 자율형 AI 가이드라인'을 언급했으나 발표 주체·일자 미확인. <strong>현 수집 파이프라인의 구조적 누락</strong> — 차주 RSS 설정(CISA·NIST·ENISA·EU AI Office·英 AISI·日 IPA·NEDO) 후 정상화 예정.</p>
+<p><em>To-Do (리포트 작성자)</em>: <code>config/sources.yaml</code>에 해외 정책기관 8곳 + 매체 4곳(Reuters/Bloomberg/TechCrunch/The Record) 등록 → 다음 리포트부터 권역별 최소 1건 보장.</p>
+</blockquote>
+<h3 id="_4">기술·위협 (정책·산업 맥락 한정)</h3>
+<blockquote>
+<p>본 카테고리는 정책·산업 영향이 있는 경우에만 다룸. 기술 상세(CVE 번호·CVSS·취약점 메커니즘)는 <strong>부록 A — 각주 1</strong>로 분리.</p>
+</blockquote>
+<ul>
+<li><strong>Claude Mythos Preview의 'AI 자율 취약점 발견' 서술 논란</strong> — 과대포장 이견 존재. 부록 A 검증 이력 참조.</li>
+</ul>
+<h2 id="5">5. 출처 및 기사 목록</h2>
+<table>
+<thead>
+<tr>
+<th>출처 그룹</th>
+<th>기사 수</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>웹 검색 (서울경제 계열 5건 포함 — <strong>출처 편중</strong>)</td>
+<td>8</td>
+</tr>
+<tr>
+<td>지정 RSS·사이트</td>
+<td>0 (미설정)</td>
+</tr>
+<tr>
+<td>국내 정책기관 1차 (과기정통부·KISA·국정원·금보원·AI안전연구소)</td>
+<td>0 (미설정)</td>
+</tr>
+<tr>
+<td>해외 정책기관 1차 (CISA·NIST·ENISA·英 AISI 등)</td>
+<td>0 (미설정)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>출처 편중 경고</strong>: 8건 중 5건이 서울경제(sedaily.com)·서울경제 재게시(네이트). 사실상 단일 매체 의존. 차주 다변화 필수.</p>
+</blockquote>
+<p>전체 등재 기사 (8):
+1. 과기정통부–OpenAI AI 보안 워크숍 (Seoul Economic Daily, 2026-05-18) — https://en.sedaily.com/technology/2026/05/18/korea-expands-ai-security-talks-to-openai-after-anthropic
+2. '미토스 사태' 긴급 대응 (서울경제, 발행일 미상) — https://www.sedaily.com/article/20036606
+3. 과기정통부 '이달 말 AI 보안 대책 발표' (네이트뉴스, 2026-05-08) — https://m.news.nate.com/view/20260508n23996
+4. 과기정통부 '미토스' 산학연 간담회 (네이트뉴스, 2026-05-08) — https://news.nate.com/view/20260508n17445
+5. KISA 120억 원 AI 사이버보안 지원사업·50개사 (Korea Times, 2026-05-08) — https://www.koreatimes.co.kr/southkorea/20260508/govt-launches-83-mil-ai-cybersecurity-program-selects-50-firms
+6. 'AI 안전, 한국은 준비됐나' (Seoul Economic Daily, 2026-05-18) — https://en.sedaily.com/finance/2026/05/18/ai-safety-is-korea-ready
+7. KISA, AI 보안·제로트러스트 신기술 개발에 120억 투입·18개 과제 (데일리시큐, 2026-05-08) — https://www.dailysecu.com/news/articleView.html?idxno=206635
+8. 한국인터넷진흥원, AI 정보보호기업 육성 50개 기업·120억 규모 (헤럴드경제, 2026-05-08) — https://biz.heraldcorp.com/article/10733434</p>
+<hr>
+<h2 id="a">부록 A — 검증·트리아지 (참고자료)</h2>
+<blockquote>
+<p>본문 의사결정에 필요하지 않은 검증 흔적·기술 상세. 신뢰성 추적용으로만 참조.</p>
+</blockquote>
+<h3 id="a1-1-claude-mythos">A.1 각주 1 — Claude Mythos 발견 취약점 기술 상세</h3>
+<ul>
+<li><strong>CVE-2026-4747</strong> (FreeBSD RPCSEC_GSS) — 스택 버퍼 오버플로(CWE-121), CVSS 8.8, 원격코드실행. NVD·FreeBSD-SA-26:08 (2026-03-26) 공개. <em>논란</em>: 미토스 공개(4/7) 이전 권고이므로 'AI 자율 발견'이 아닌 '사후 익스플로잇 작성'에 그쳤다는 연구자 이견 존재.</li>
+<li><strong>OpenBSD TCP SACK 27년 결함</strong> — SACK 블록 범위 미검증 + 부호정수 오버플로 → 널포인터 역참조. <strong>DoS</strong> (원격 서비스 거부). Anthropic 레드팀 페이지(red.anthropic.com) 확인. <em>최초 보고서의 'RCE' 표기는 오류 → DoS로 정정.</em></li>
+</ul>
+<h3 id="a2-ai-security-triage">A.2 트리아지 메모 (ai-security-triage 적용 결과)</h3>
+<ul>
+<li><strong>제외</strong>: 2025-12 'AI 보안 안내서', 2026-01-22 시행 AI 기본법 등 — 관련성은 높으나 수집 기간(직전 7일) 외 → '배경 맥락'으로만 인용.</li>
+<li><strong>low_confidence</strong>: '글로벌 보안 당국 자율형 AI 가이드라인'(발표일 미확인), 'AI 안전, 한국은 준비됐나'(분석·오피니언) — 포함하되 표기.</li>
+<li><strong>수집 한계</strong>: 지정 RSS·정책기관 피드 미설정 → 웹 검색 단일 출처. <code>config/sources.yaml</code> 설정 시 정상화 (다음 리포트 P0 과제).</li>
+</ul>
+<h3 id="a3">A.3 사실 검증 이력</h3>
+<table>
+<thead>
+<tr>
+<th>날짜</th>
+<th>항목</th>
+<th>조치</th>
+<th>사유·근거</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-05-19</td>
+<td>KISA 지원사업 예산 '12억 원'</td>
+<td><strong>'120억 원'으로 정정</strong></td>
+<td>영문 'KRW 12 billion'을 한국어 단위 오역(10배 오류). 데일리시큐·헤럴드경제 원문 교차 확인</td>
+</tr>
+<tr>
+<td>2026-05-19</td>
+<td>미토스 발견 취약점 'CVE-2026-4747 / OpenBSD 27년 / FreeBSD 17년'</td>
+<td>1차 검증 후 본문 복원</td>
+<td>NVD(CVE-2026-4747, CWE-121, CVSS 8.8, 2026-03-26) + Anthropic 레드팀 페이지 확인</td>
+</tr>
+<tr>
+<td>2026-05-19</td>
+<td>'AI 자율 발견' 서술</td>
+<td><strong>이견 병기</strong></td>
+<td>CVE-2026-4747은 미토스 공개(4/7) 전 FreeBSD 권고(3/26)로 공개됨 — calif.io·flyingpenguin 등 자율 발견 주장에 이견</td>
+</tr>
+<tr>
+<td>2026-05-19</td>
+<td>OpenBSD 27년 SACK 결함 성격</td>
+<td><strong>'RCE'→'DoS'로 정정</strong></td>
+<td>Anthropic 레드팀 페이지: 원격 서비스 거부(crash) — 원격코드실행 아님</td>
+</tr>
+<tr>
+<td>2026-05-19</td>
+<td>'4/14 CISO 소집·4/30 약 3만 CISO 배포' 날짜</td>
+<td><strong>본문 보류</strong></td>
+<td>신뢰 매체에서 일자 미확인 — 블로그 스니펫 출처. 차주 추적</td>
+</tr>
+<tr>
+<td>2026-05-19</td>
+<td>KISA 'AI 보안기업 육성' 9개 과제 구성</td>
+<td>추가 등재</td>
+<td>데일리시큐 보도 확인</td>
+</tr>
+</tbody>
+</table>
+<h3 id="a4">A.4 참고자료 (수집 기간 외 — 배경 맥락)</h3>
+<blockquote>
+<p>본문 인용 금지. 추세 참고용으로만 사용.</p>
+</blockquote>
+<ul>
+<li>2025-12 과기정통부 'AI 보안 안내서' — 개발자·서비스제공자·이용자별 보안 프레임워크</li>
+<li>2025-12 국정원 'AI 시스템 15개 위협·30개 대책'</li>
+<li>2026-01-22 시행 AI 기본법 — 세계 최초 고성능 프런티어 AI 안전 요구사항</li>
+<li>'2026 보안 시장 백서' (2025년 말 발간) — <em>국내 정보보안 시장 전체</em> 10조 6,082억 원(+13.6%) 전망. <strong>주의</strong>: 본 보고서 주제(AI보안)와 범위 불일치 → 인용 시 'AI보안 부분 미분리' 명시 필요.</li>
+</ul>
+  </article>
+
+  <section class="comments-section">
+    <h2>💬 댓글</h2>
+    <div class="comments-disabled">Giscus 미설정 — site/config.json 의 <code>giscus.repo</code> · <code>repo_id</code> · <code>category_id</code> 를 채우면 활성화됩니다.</div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div>Javis · 자동 생성 · 2026-05-26 20:30 빌드</div>
+</footer>
+
+<script>window.JAVIS_CONFIG = {"kakao_app_key": "", "share_image": ""};</script>
+<script src="../assets/share.js"></script>
+</body>
+</html>

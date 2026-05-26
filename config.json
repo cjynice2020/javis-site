@@ -1,0 +1,16 @@
+{
+  "site_name": "Javis",
+  "site_tagline": "AI보안 동향 리포트 — 매일·매주 자동 발행",
+  "base_url": "https://cold-cloud-438a.cjynice3378.workers.dev",
+  "kakao_app_key": "",
+  "share_image": "",
+  "giscus": {
+    "repo": "",
+    "repo_id": "",
+    "category": "Reports",
+    "category_id": "",
+    "mapping": "pathname",
+    "theme": "light",
+    "lang": "ko"
+  }
+}

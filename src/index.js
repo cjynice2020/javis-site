@@ -75,6 +75,12 @@ async function postComment(request, env) {
     return jsonResponse({ error: `comment too long (max ${MAX_BODY})` }, 400);
   }
 
+  if (!env.TURNSTILE_SECRET) {
+    return jsonResponse(
+      { error: 'server not configured (TURNSTILE_SECRET missing)' },
+      503
+    );
+  }
   const ip = request.headers.get('CF-Connecting-IP') || '';
   const ok = await verifyTurnstile(turnstileToken, ip, env);
   if (!ok) {

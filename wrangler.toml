@@ -1,9 +1,8 @@
-# Cloudflare Workers Static Assets — Javis site
+# Cloudflare Pages — Javis site
+# Pages-format config (uses pages_build_output_dir, NOT [assets]).
 # Forces explicit config so the platform skips framework auto-detection
 # (was misdetecting as Hugo and running `npx hugo`).
 
 name = "javis-site"
 compatibility_date = "2026-05-26"
-
-[assets]
-directory = "./public"
+pages_build_output_dir = "./public"

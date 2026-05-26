@@ -1,0 +1,9 @@
+# Cloudflare Workers Static Assets — Javis site
+# Forces explicit config so the platform skips framework auto-detection
+# (was misdetecting as Hugo and running `npx hugo`).
+
+name = "javis-site"
+compatibility_date = "2026-05-26"
+
+[assets]
+directory = "./public"

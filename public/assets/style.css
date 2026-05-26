@@ -113,16 +113,66 @@ ul, ol { padding-left: 1.6em; }
 hr { border: none; border-top: 1px solid var(--c-border); margin: 1.5em 0; }
 img { max-width: 100%; height: auto; }
 
-/* ---- Giscus 댓글 영역 ---- */
+/* ---- 댓글 영역 ---- */
 .comments-section {
   margin-top: 3em; padding-top: 1em;
   border-top: 1px solid var(--c-border);
 }
 .comments-section h2 { font-size: 1.1em; margin-bottom: 0.8em; }
-.comments-disabled {
+.comments-disabled, .comments-error {
   background: #fff7ed; color: #9a3412; border: 1px solid #fed7aa;
   padding: 12px 14px; border-radius: 6px; font-size: 0.9em;
 }
+.comments-empty {
+  color: var(--c-muted); font-size: 0.92em; padding: 12px 0;
+}
+
+/* 댓글 목록 */
+.comments-list { margin-bottom: 1.4em; }
+.comment {
+  background: var(--c-surface); border: 1px solid var(--c-border);
+  border-radius: 6px; padding: 10px 14px; margin-bottom: 8px;
+}
+.comment-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: 8px; margin-bottom: 4px;
+}
+.comment-head strong { font-size: 0.95em; }
+.comment-head time { color: var(--c-muted); font-size: 0.8em; }
+.comment-body {
+  font-size: 0.95em; color: var(--c-text); white-space: pre-wrap;
+  word-break: break-word; overflow-wrap: anywhere;
+}
+
+/* 댓글 폼 */
+.comments-form {
+  display: flex; flex-direction: column; gap: 8px;
+  background: var(--c-bg); border: 1px solid var(--c-border);
+  border-radius: 8px; padding: 14px;
+}
+.comments-form input[type="text"],
+.comments-form textarea {
+  width: 100%; padding: 8px 10px; font: inherit;
+  border: 1px solid var(--c-border); border-radius: 5px;
+  background: var(--c-surface); color: var(--c-text);
+}
+.comments-form textarea { resize: vertical; min-height: 4em; }
+.comments-form input:focus, .comments-form textarea:focus {
+  outline: 2px solid var(--c-accent); outline-offset: -1px;
+  border-color: var(--c-accent);
+}
+.comments-form-row {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+}
+.comments-form button {
+  background: var(--c-accent); color: white; border: none;
+  padding: 9px 18px; border-radius: 6px; font-weight: 600; cursor: pointer;
+}
+.comments-form button:disabled {
+  background: #9ca3af; cursor: not-allowed;
+}
+.comments-form button:hover:not(:disabled) { filter: brightness(0.95); }
+.comments-msg { font-size: 0.88em; color: var(--c-muted); }
 
 /* ---- 푸터 ---- */
 .site-footer {

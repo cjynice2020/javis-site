@@ -1,10 +1,20 @@
-# Cloudflare Workers Static Assets — Javis site
-# Workers-format config (project type is Workers, URL = *.workers.dev).
-# Forces explicit config so the platform skips framework auto-detection
-# (was misdetecting as Hugo and running `npx hugo`).
+# Cloudflare Workers — Javis site
+# Hybrid: static assets (./public) + Worker entry (./src/index.js) for /api/comments.
+# Worker script intercepts /api/comments routes and falls through to ASSETS
+# binding for everything else.
 
 name = "javis-site"
 compatibility_date = "2026-05-26"
+main = "src/index.js"
 
 [assets]
 directory = "./public"
+binding = "ASSETS"
+
+# Comments storage — namespace created via dashboard.
+[[kv_namespaces]]
+binding = "COMMENTS_KV"
+id = "a479057e4e184baab81b51a49f099cfb"
+
+# TURNSTILE_SECRET is set via dashboard (Settings → Variables & Secrets).
+# Do NOT commit the secret here.

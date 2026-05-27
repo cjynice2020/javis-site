@@ -48,6 +48,16 @@
     document.head.appendChild(s);
   }
 
+  // Read OG / Twitter / standard meta. OG is the source of truth — set by
+  // build-javis-site.py per report — and falls back to legacy attributes
+  // when an older HTML predates the OG block.
+  function pickMeta(name) {
+    const el = document.querySelector(
+      'meta[property="' + name + '"], meta[name="' + name + '"]'
+    );
+    return el ? (el.getAttribute('content') || '') : '';
+  }
+
   loadKakaoSdk(function () {
     try {
       if (!Kakao.isInitialized()) Kakao.init(cfg.kakao_app_key);
@@ -57,18 +67,17 @@
       return;
     }
     kakaoBtn.addEventListener('click', function () {
-      const title = document.title || 'Javis 리포트';
-      const desc = document.querySelector('meta[name="description"]');
+      const title = pickMeta('og:title') || document.title || 'Javis 리포트';
+      const desc  = pickMeta('og:description') || pickMeta('description') || '';
+      const img   = pickMeta('og:image') || cfg.share_image || '';
+      const url   = pickMeta('og:url') || window.location.href;
       Kakao.Share.sendDefault({
         objectType: 'feed',
         content: {
           title: title,
-          description: desc ? desc.getAttribute('content') : '',
-          imageUrl: cfg.share_image || '',
-          link: {
-            mobileWebUrl: window.location.href,
-            webUrl: window.location.href,
-          },
+          description: desc,
+          imageUrl: img,
+          link: { mobileWebUrl: url, webUrl: url },
         },
       });
     });

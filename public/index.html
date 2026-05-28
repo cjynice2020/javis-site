@@ -7,7 +7,7 @@
 <title>Javis — AI보안 동향 리포트 — 매일·매주 자동 발행</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
+<body data-filter="all">
 
 <header class="site-header">
   <div class="wrap">
@@ -18,27 +18,39 @@
 
 <main class="container">
 
-  <div class="section-title"><span class="badge weekly">위클리</span> 주간 동향 리포트</div>
-  <ul class="report-list">
-<li><a href="reports/weekly-report-2026-05-28.html"><div class="title">🛡️ AI보안 주간 동향 리포트 (2026-05-28)</div><div class="meta">2026-05-28</div></a></li>
-<li><a href="reports/weekly-report-2026-05-22.html"><div class="title">🛡️ AI보안 주간 동향 리포트 (2026-05-22)</div><div class="meta">2026-05-22</div></a></li>
-<li><a href="reports/weekly-report-2026-05-20-v3.html"><div class="title">AI보안산업 주간 동향 리포트 (2026-05-20 · v3)</div><div class="meta">2026-05-20 · v3</div></a></li>
-<li><a href="reports/weekly-report-2026-05-19.html"><div class="title">AI보안산업 주간 동향 리포트 (2026-05-19)</div><div class="meta">2026-05-19</div></a></li>
+  <section class="hero">
+    <a class="hero-card hero-weekly" href="reports/weekly-report-2026-05-28.html"><div class="hero-eyebrow"><span class="badge weekly">위클리</span> 최신 위클리</div><div class="hero-title">🛡️ AI보안 주간 동향 리포트 (2026-05-28)</div><p class="hero-summary">이번 주는 AI 보안의 국가·진영 경쟁이 가장 굵직한 흐름이었다. 트럼프 대통령이 5월 21일 첨단 AI 모델 사전 보안검증 행정명령 서명을 직전 보류한 가운데, 오픈AI는 5월 27일 한국에서 '한국 사이버 액션...</p><div class="hero-meta">2026-05-28 <span class="hero-cta">읽기 →</span></div></a>
+    <a class="hero-card hero-daily" href="reports/daily-report-2026-05-28.html"><div class="hero-eyebrow"><span class="badge daily">데일리</span> 최신 데일리</div><div class="hero-title">🛡️ AI보안 데일리 (2026-05-28 (목요일))</div><p class="hero-summary">과학기술정보통신부가 오픈AI의 정부·기관 신뢰 기반 접근GTAC 프로그램에 아시아권에서 일본과 동시 참여를 확정하며 'GPT-사이버-5.5' 등 고성능 사이버 모델 접근 권한을 확보, 클로드 미토스·GPT-5.5발...</p><div class="hero-meta">2026-05-28 <span class="hero-cta">읽기 →</span></div></a>
+  </section>
+
+  <nav class="filter-tabs" role="tablist" aria-label="리포트 종류 필터">
+    <button type="button" class="tab is-active" data-filter="all" role="tab" aria-selected="true">전체 <span class="tab-count">9</span></button>
+    <button type="button" class="tab" data-filter="weekly" role="tab" aria-selected="false">위클리 <span class="tab-count">4</span></button>
+    <button type="button" class="tab" data-filter="daily" role="tab" aria-selected="false">데일리 <span class="tab-count">5</span></button>
+  </nav>
+
+  <div class="section-title" data-section="weekly"><span class="badge weekly">위클리</span> 주간 동향 리포트</div>
+  <ul class="report-list" data-kind="weekly">
+<li data-kind="weekly"><a href="reports/weekly-report-2026-05-28.html"><div class="title">🛡️ AI보안 주간 동향 리포트 (2026-05-28)</div><div class="summary">이번 주는 AI 보안의 국가·진영 경쟁이 가장 굵직한 흐름이었다. 트럼프 대통령이 5월 21일 첨단 AI 모델 사전 보안검증 행정명령 서명을 직전 보류한 가운데, 오픈AI는 5월 27일 한국에서 '한국 사이버 액션...</div><div class="meta">2026-05-28</div></a></li>
+<li data-kind="weekly"><a href="reports/weekly-report-2026-05-22.html"><div class="title">🛡️ AI보안 주간 동향 리포트 (2026-05-22)</div><div class="summary">이번 주 AI보안 동향의 중심축은 거버넌스와 에이전트 보안이었다. 미국 백악관이 첨단 AI 모델 공개 전 정부 사전심사90일 체계를 담은 행정명령을 준비하며 국가안보·사이버보안을 명분으로 내세웠고, 국내에서는...</div><div class="meta">2026-05-22</div></a></li>
+<li data-kind="weekly"><a href="reports/weekly-report-2026-05-20-v3.html"><div class="title">AI보안산업 주간 동향 리포트 (2026-05-20 · v3)</div><div class="summary">이번 주 AI보안 영역은 3개의 축이 동시에 움직인 한 주였다.</div><div class="meta">2026-05-20 · v3</div></a></li>
+<li data-kind="weekly"><a href="reports/weekly-report-2026-05-19.html"><div class="title">AI보안산업 주간 동향 리포트 (2026-05-19)</div><div class="summary">웹 검색 단일 출처 지정 RSS·정책기관 피드 미설정 — 본 리포트의 핵심 한계</div><div class="meta">2026-05-19</div></a></li>
 </ul>
 
-  <div class="section-title"><span class="badge daily">데일리</span> 데일리 리포트</div>
-  <ul class="report-list">
-<li><a href="reports/daily-report-2026-05-28.html"><div class="title">🛡️ AI보안 데일리 (2026-05-28 (목요일))</div><div class="meta">2026-05-28</div></a></li>
-<li><a href="reports/daily-report-2026-05-27-v2.html"><div class="title">🛡️ AI보안 데일리 (2026-05-27 (수요일))</div><div class="meta">2026-05-27 · v2</div></a></li>
-<li><a href="reports/daily-report-2026-05-24.html"><div class="title">🛡️ AI보안 데일리 (2026-05-24 (일요일))</div><div class="meta">2026-05-24</div></a></li>
-<li><a href="reports/daily-report-2026-05-22.html"><div class="title">🛡️ AI보안 데일리 (2026-05-22 (금요일))</div><div class="meta">2026-05-22</div></a></li>
-<li><a href="reports/daily-report-2026-05-20.html"><div class="title">🛡️ AI보안 데일리 (2026-05-20 (수요일))</div><div class="meta">2026-05-20</div></a></li>
+  <div class="section-title" data-section="daily"><span class="badge daily">데일리</span> 데일리 리포트</div>
+  <ul class="report-list" data-kind="daily">
+<li data-kind="daily"><a href="reports/daily-report-2026-05-28.html"><div class="title">🛡️ AI보안 데일리 (2026-05-28 (목요일))</div><div class="summary">과학기술정보통신부가 오픈AI의 정부·기관 신뢰 기반 접근GTAC 프로그램에 아시아권에서 일본과 동시 참여를 확정하며 'GPT-사이버-5.5' 등 고성능 사이버 모델 접근 권한을 확보, 클로드 미토스·GPT-5.5발...</div><div class="meta">2026-05-28</div></a></li>
+<li data-kind="daily"><a href="reports/daily-report-2026-05-27-v2.html"><div class="title">🛡️ AI보안 데일리 (2026-05-27 (수요일))</div><div class="summary">과기정통부가 오픈AI의 'GTAC' 프로그램에 참여해 사이버보안 분야 프런티어 모델 접근권을 확보하고, 같은 날 앤트로픽이 한국 지사장으로 최기영 대표를 선임하며 글로벌 AI 기업의 국내 정책·시장 접점이 동시에...</div><div class="meta">2026-05-27 · v2</div></a></li>
+<li data-kind="daily"><a href="reports/daily-report-2026-05-24.html"><div class="title">🛡️ AI보안 데일리 (2026-05-24 (일요일))</div><div class="summary">앤트로픽이 'Project Glasswing'을 통해 자사 보안 모델 Claude Mythos로 광범위하게 사용되는 소프트웨어에서 1만 건 이상의 고·중대 심각도 취약점을 식별했다고 공개했다. AI 기반 취약점...</div><div class="meta">2026-05-24</div></a></li>
+<li data-kind="daily"><a href="reports/daily-report-2026-05-22.html"><div class="title">🛡️ AI보안 데일리 (2026-05-22 (금요일))</div><div class="summary">미국 백악관이 첨단 AI 모델 공개 전 정부 사전검토 체계를 담은 행정명령을 준비 중이며, 국가안보·사이버보안 위험을 이유로 오픈AI·앤트로픽 등에 비공개 브리핑을 진행했다. 같은 날 앤트로픽 보안 모델...</div><div class="meta">2026-05-22</div></a></li>
+<li data-kind="daily"><a href="reports/daily-report-2026-05-20.html"><div class="title">🛡️ AI보안 데일리 (2026-05-20 (수요일))</div><div class="summary">앤트로픽 보안 특화 모델 '미토스Mythos, 일부 매체 표기 '미소스'' 관련 보도가 동일 날짜에 정책·산업·기술 3개 영역에서 동시 등재됐다. 클라우드플레어가 약 50개 자체 리포지토리에 미토스 프리뷰를 적용한...</div><div class="meta">2026-05-20</div></a></li>
 </ul>
 
 </main>
 
 <footer class="site-footer">
-  <div>Javis · 총 9건 · 2026-05-28 15:10 빌드</div>
+  <div>Javis · 총 9건 · 2026-05-28 19:14 빌드</div>
 </footer>
+<script src="assets/filter.js"></script>
 </body>
 </html>

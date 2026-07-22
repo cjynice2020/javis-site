@@ -62,7 +62,7 @@ async function postComment(request, env) {
   }
 
   const { pageId, name, comment, turnstileToken } = body || {};
-  if (!pageId || !name || !comment || !turnstileToken) {
+  if (!pageId || !name || !comment || (turnstileToken !== '' && !turnstileToken)) {
     return jsonResponse({ error: 'missing required fields' }, 400);
   }
   if (typeof name !== 'string' || typeof comment !== 'string') {

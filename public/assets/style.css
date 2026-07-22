@@ -303,68 +303,132 @@ img { max-width: 100%; height: auto; }
 /* 카드뉴스 탭 태그 */
 .item-tag.cardnews { background: #fff3e8; color: #c2660a; }
 
-/* ---- 카드뉴스 페이지 ---- */
-.cn-page { display: flex; flex-direction: column; gap: 0; }
+/* ---- 카드뉴스 페이지 (정사각형 카드 스택) ---- */
+body.cn-body { background: #e0e0e0; }
 
+.cn-main {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 20px; padding: 20px 16px 48px;
+}
+
+.cn-nav-bar {
+  width: 100%; max-width: 540px;
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 0.86em;
+}
+.cn-nav-bar a { color: var(--c-accent); text-decoration: none; }
+.cn-nav-bar a:hover { text-decoration: underline; }
+
+/* 정사각형 카드 */
+.cn-card {
+  width: 540px; max-width: calc(100vw - 32px);
+  aspect-ratio: 1 / 1;
+  background: #fff; border-radius: 10px;
+  box-shadow: inset 0 0 0 5px #ccc;
+  padding: 28px 30px 22px;
+  display: flex; flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 카테고리별 inset border 색상 */
+.cn-card.cat-policy   { box-shadow: inset 0 0 0 5px #4186BF; }
+.cn-card.cat-industry { box-shadow: inset 0 0 0 5px #4DABAD; }
+.cn-card.cat-tech     { box-shadow: inset 0 0 0 5px #22c55e; }
+.cn-card.cat-incident { box-shadow: inset 0 0 0 5px #FF6B6B; }
+.cn-card.cat-research { box-shadow: inset 0 0 0 5px #FFC000; }
+
+/* 커버 카드 */
 .cn-cover {
   background: #1a2740;
-  border-radius: 12px; padding: 32px 28px;
-  color: #fff; margin-bottom: 16px;
+  box-shadow: inset 0 0 0 5px #4A90D9;
 }
-.cn-cover-top {
-  display: flex; align-items: center; gap: 10px; margin-bottom: 14px;
+
+/* 마감 CTA 카드 */
+.cn-closing {
+  background: #f3f4f6;
+  box-shadow: inset 0 0 0 5px #d1d5db;
 }
-.cn-cover-kind {
-  display: inline-block; background: rgba(255,255,255,0.15);
-  color: #fff; font-size: 0.72em; font-weight: 700;
-  padding: 3px 9px; border-radius: 4px; letter-spacing: 0.04em;
+
+/* 카드 내부 레이아웃 */
+.cn-card-top {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 8px;
 }
-.cn-cover-date {
-  font-size: 0.82em; color: rgba(255,255,255,0.65); font-weight: 500;
+.cn-card-mid {
+  flex: 1; display: flex; flex-direction: column; justify-content: center;
+  gap: 12px; padding: 14px 0;
 }
+
+/* 타이포그래피 */
+.cn-series {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: rgba(255,255,255,0.55);
+}
+.cn-eyebrow {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--c-muted);
+}
+.cat-policy .cn-eyebrow   { color: #4186BF; }
+.cat-industry .cn-eyebrow { color: #4DABAD; }
+.cat-tech .cn-eyebrow     { color: #22c55e; }
+.cat-incident .cn-eyebrow { color: #FF6B6B; }
+.cat-research .cn-eyebrow { color: #FFC000; }
+.cn-closing .cn-eyebrow   { color: var(--c-muted); }
+
 .cn-cover-title {
-  font-size: 1.25em; font-weight: 700; line-height: 1.35;
-  color: #fff; margin: 0 0 10px;
-  text-wrap: balance;
+  font-size: 26px; font-weight: 900; line-height: 1.3;
+  color: #fff; margin: 0; text-wrap: balance;
 }
 .cn-cover-sub {
-  font-size: 0.85em; color: rgba(255,255,255,0.6); margin: 0;
+  font-size: 13px; color: rgba(255,255,255,0.55); margin: 0;
 }
-
-.cn-stack { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
-
-.cn-card {
-  background: #fff; border-radius: 8px;
-  border-left: 4px solid currentColor;
-  padding: 14px 16px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+.cn-card-headline {
+  font-size: 22px; font-weight: 800; line-height: 1.4;
+  color: #111; margin: 0; text-wrap: balance;
 }
-.cn-card.cat-policy   { color: var(--cat-policy); }
-.cn-card.cat-industry { color: var(--cat-industry); }
-.cn-card.cat-tech     { color: var(--cat-tech); }
-.cn-card.cat-incident { color: var(--cat-incident); }
-.cn-card.cat-research { color: var(--cat-research); }
-
-.cn-cat-label {
-  font-size: 0.72em; font-weight: 700; letter-spacing: 0.04em;
-  text-transform: uppercase; margin-bottom: 5px;
-  color: currentColor;
+.cn-card-body {
+  font-size: 14px; color: #555; line-height: 1.65; margin: 0;
 }
-.cn-cat-snippet {
-  font-size: 0.88em; color: var(--c-text); line-height: 1.5; margin: 0;
+.cn-no-news {
+  font-size: 15px; color: #aaa; font-style: italic; margin: 0;
 }
-.cn-cat-empty { color: var(--c-muted); font-style: italic; }
-
-.cn-cta { text-align: center; padding: 16px 0 8px; }
+.cn-closing-text {
+  font-size: 20px; font-weight: 700; color: #444; margin: 0; line-height: 1.4;
+}
 .cn-cta-btn {
-  display: inline-block; background: var(--c-accent); color: #fff;
-  padding: 11px 24px; border-radius: 8px; font-weight: 600;
-  font-size: 0.92em; text-decoration: none; transition: filter 0.12s;
+  display: inline-block; background: #1a2740; color: #fff;
+  padding: 12px 24px; border-radius: 6px; font-size: 15px; font-weight: 700;
+  text-decoration: none; margin-top: 12px; transition: filter 0.12s;
 }
-.cn-cta-btn:hover { filter: brightness(0.92); text-decoration: none; }
+.cn-cta-btn:hover { filter: brightness(1.15); text-decoration: none; }
 
-.cn-briefing-link {
-  margin-left: 12px; font-size: 0.88em;
+/* 로고 행 */
+.cn-logo-row {
+  display: flex; align-items: center; justify-content: space-between;
+  border-top: 1px solid rgba(0,0,0,0.07); padding-top: 14px;
+}
+.cn-cover .cn-logo-row { border-top-color: rgba(255,255,255,0.15); }
+.cn-logo-mark { font-size: 12px; font-weight: 700; color: #333; }
+.cn-cover .cn-logo-mark { color: rgba(255,255,255,0.75); }
+.cn-closing .cn-logo-mark { color: #555; }
+.cn-logo-date { font-size: 11px; color: rgba(0,0,0,0.35); }
+.cn-cover .cn-logo-date { color: rgba(255,255,255,0.35); }
+.cn-logo-tagline { font-size: 11px; color: rgba(255,255,255,0.35); }
+
+/* SVG 장식 */
+.cn-accent-svg { flex-shrink: 0; }
+
+/* 댓글 영역 */
+.cn-comments-wrap { width: 540px; max-width: calc(100vw - 32px); }
+
+.cn-briefing-link { font-size: 0.88em; }
+
+@media (max-width: 560px) {
+  .cn-cover-title   { font-size: 20px; }
+  .cn-card-headline { font-size: 18px; }
+  .cn-card-body     { font-size: 13px; }
+  .cn-cta-btn       { font-size: 14px; padding: 10px 18px; }
+  .cn-closing-text  { font-size: 17px; }
 }
 .report-nav { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; }
 

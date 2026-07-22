@@ -319,18 +319,24 @@ body.cn-body { background: #111318; }
 .cn-nav-bar a { color: rgba(255,255,255,0.55); text-decoration: none; }
 .cn-nav-bar a:hover { color: #fff; text-decoration: none; }
 
-/* 정사각형 카드 */
+/* 정사각형 카드 — padding 없음 (히어로 구조용) */
 .cn-card {
   width: 540px; max-width: calc(100vw - 32px);
   aspect-ratio: 1 / 1;
   border-radius: 14px;
-  padding: 32px 34px 26px;
+  padding: 0;
   display: flex; flex-direction: column;
-  justify-content: space-between;
   position: relative;
   overflow: hidden;
   box-shadow: 0 12px 40px rgba(0,0,0,0.55);
   background: #1a2740;
+}
+
+/* 커버·마감 카드는 기존 전체 패딩 구조 유지 */
+.cn-cover,
+.cn-closing {
+  padding: 32px 34px 26px;
+  justify-content: space-between;
 }
 
 /* 상단 액센트 바 */
@@ -340,6 +346,7 @@ body.cn-body { background: #111318; }
   top: 0; left: 0; right: 0;
   height: 4px;
   border-radius: 14px 14px 0 0;
+  z-index: 2;
 }
 .cn-card.cat-policy::before   { background: #4186BF; }
 .cn-card.cat-industry::before { background: #4DABAD; }
@@ -362,18 +369,64 @@ body.cn-body { background: #111318; }
 /* 마감 CTA 카드 */
 .cn-closing { background: linear-gradient(145deg, #16213e 0%, #1a2540 100%); }
 
-/* 대형 장식 숫자 */
+/* ── 히어로 시각 영역 (카드 상단 56%) ── */
+.cn-hero {
+  height: 56%;
+  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.cat-policy .cn-hero   { background: linear-gradient(160deg, rgba(65,134,191,0.28) 0%, rgba(65,134,191,0.04) 100%); }
+.cat-industry .cn-hero { background: linear-gradient(160deg, rgba(77,171,173,0.28) 0%, rgba(77,171,173,0.04) 100%); }
+.cat-tech .cn-hero     { background: linear-gradient(160deg, rgba(34,197,94,0.28)  0%, rgba(34,197,94,0.04)  100%); }
+.cat-incident .cn-hero { background: linear-gradient(160deg, rgba(255,107,107,0.28)0%, rgba(255,107,107,0.04)100%); }
+.cat-research .cn-hero { background: linear-gradient(160deg, rgba(255,192,0,0.28)  0%, rgba(255,192,0,0.04)  100%); }
+
+/* 중앙 광원 글로우 */
+.cn-hero::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 55% 50% at 50% 55%, rgba(255,255,255,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* 카테고리 대형 이모지 */
+.cn-hero-emoji {
+  font-size: 88px; line-height: 1;
+  position: relative; z-index: 1;
+  filter: drop-shadow(0 6px 28px rgba(0,0,0,0.55));
+  user-select: none;
+}
+
+/* 장식 숫자 — 히어로 내 하단 우측 */
 .cn-card-num {
   position: absolute;
-  right: -6px; bottom: -30px;
-  font-size: 220px; font-weight: 900; line-height: 1;
-  color: rgba(255,255,255,0.055);
+  right: -2px; bottom: -20px;
+  font-size: 150px; font-weight: 900; line-height: 1;
+  color: rgba(255,255,255,0.065);
   user-select: none; pointer-events: none;
   letter-spacing: -0.04em;
   font-variant-numeric: tabular-nums;
+  z-index: 0;
 }
 
-/* 카드 내부 레이아웃 */
+/* ── 카드 하단 텍스트 영역 ── */
+.cn-card-foot {
+  flex: 1;
+  padding: 13px 22px 15px;
+  display: flex; flex-direction: column;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  position: relative; z-index: 1;
+}
+.cn-foot-top {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+}
+.cn-foot-body {
+  flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 6px;
+}
+
+/* 커버/마감 내부 레이아웃 (기존 cn-card-mid 유지) */
 .cn-card-top {
   display: flex; align-items: center; justify-content: space-between;
   gap: 8px; position: relative; z-index: 1;
@@ -393,8 +446,8 @@ body.cn-body { background: #111318; }
 /* 카테고리 레이블 칩 */
 .cn-eyebrow {
   display: inline-block;
-  padding: 5px 13px; border-radius: 20px;
-  font-size: 11px; font-weight: 800; letter-spacing: 0.07em;
+  padding: 4px 11px; border-radius: 20px;
+  font-size: 10px; font-weight: 800; letter-spacing: 0.07em;
   text-transform: uppercase;
   background: rgba(255,255,255,0.14); color: rgba(255,255,255,0.85);
 }
@@ -412,11 +465,11 @@ body.cn-body { background: #111318; }
 .cn-cover-sub { font-size: 14px; color: rgba(255,255,255,0.45); margin: 0; }
 
 .cn-card-headline {
-  font-size: 28px; font-weight: 800; line-height: 1.4;
+  font-size: 19px; font-weight: 800; line-height: 1.45;
   color: #fff; margin: 0; text-wrap: balance;
 }
-.cn-card-body { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.7; margin: 0; }
-.cn-no-news   { font-size: 16px; color: rgba(255,255,255,0.25); font-style: italic; margin: 0; }
+.cn-card-body { font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.65; margin: 0; }
+.cn-no-news   { font-size: 14px; color: rgba(255,255,255,0.3); font-style: italic; margin: 0; }
 
 .cn-closing-text {
   font-size: 22px; font-weight: 700; color: #fff; margin: 0; line-height: 1.45;
@@ -431,11 +484,11 @@ body.cn-body { background: #111318; }
 /* 로고 행 */
 .cn-logo-row {
   display: flex; align-items: center; justify-content: space-between;
-  border-top: 1px solid rgba(255,255,255,0.1); padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px;
   position: relative; z-index: 1;
 }
-.cn-logo-mark    { font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.55); }
-.cn-logo-date    { font-size: 11px; color: rgba(255,255,255,0.3); }
+.cn-logo-mark    { font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.55); }
+.cn-logo-date    { font-size: 10px; color: rgba(255,255,255,0.3); }
 .cn-logo-tagline { font-size: 11px; color: rgba(255,255,255,0.28); }
 
 /* SVG 장식 */
@@ -447,13 +500,14 @@ body.cn-body { background: #111318; }
 .cn-briefing-link { font-size: 0.88em; }
 
 @media (max-width: 560px) {
-  .cn-card        { padding: 26px 26px 22px; }
-  .cn-cover-title { font-size: 22px; }
-  .cn-card-headline { font-size: 22px; }
-  .cn-card-body   { font-size: 13px; }
-  .cn-cta-btn     { font-size: 14px; padding: 11px 22px; }
-  .cn-closing-text { font-size: 18px; }
-  .cn-card-num    { font-size: 160px; }
+  .cn-cover, .cn-closing { padding: 22px 22px 18px; }
+  .cn-cover-title   { font-size: 22px; }
+  .cn-card-headline { font-size: 16px; }
+  .cn-card-body     { font-size: 11px; }
+  .cn-hero-emoji    { font-size: 66px; }
+  .cn-cta-btn       { font-size: 14px; padding: 11px 22px; }
+  .cn-closing-text  { font-size: 18px; }
+  .cn-card-num      { font-size: 110px; }
 }
 .report-nav { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; }
 

@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="분류: 총 63건 정책 15 / 산업 10 / 기술 27 / 사고·사건 9 / 연구 2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI 보안 주간 동향 리포트">
+<meta property="og:description" content="분류: 총 63건 정책 15 / 산업 10 / 기술 27 / 사고·사건 9 / 연구 2">
+<meta property="og:site_name" content="Javis">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AI 보안 주간 동향 리포트">
+<meta name="twitter:description" content="분류: 총 63건 정책 15 / 산업 10 / 기술 27 / 사고·사건 9 / 연구 2">
+<title>AI 보안 주간 동향 리포트 · Javis</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <h1><a href="../index.html">🛡️ Javis</a></h1>
+    <div class="tag"></div>
+  </div>
+</header>
+
+<main class="container">
+  <div class="report-nav"><a href="../index.html">← Javis 목록으로</a></div>
+
+  <div>
+    <span class="badge weekly">위클리</span>
+    <span style="color:var(--c-muted); font-size:0.9em; margin-left:6px;">2026-07-13</span>
+  </div>
+
+  <div class="report-actions">
+    <button type="button" id="btn-kakao-share" class="btn-kakao">💬 카카오톡 공유</button>
+    <button type="button" id="btn-copy-url" class="btn-copy">링크 복사</button>
+  </div>
+
+  <article class="report-body">
+<h1 id="ai">AI 보안 주간 동향 리포트</h1>
+<p><strong>기간</strong>: 2026-07-07 ~ 2026-07-13<br>
+<strong>작성일</strong>: 2026-07-13<br>
+<strong>분류</strong>: 총 63건 (정책 15 / 산업 10 / 기술 27 / 사고·사건 9 / 연구 2)<br>
+<strong>원본 수집</strong>: 112건 (7일 윈도우 키워드 히트)</p>
+<hr>
+<h2 id="_1">🔑 이주의 핵심 요약</h2>
+<ol>
+<li>
+<p><strong>AI 규제 빅뱅 주간</strong> — AI 기본법 시행령 제정안(과기정통부)·개인정보 AI 데이터 규범(개인정보위)·금융위 AI 보안체계 구축 선언이 동시에 발표됐다. 국내 AI 거버넌스 법제화가 실질적 집행 단계로 진입하고 있다.</p>
+</li>
+<li>
+<p><strong>HalluSquatting — AI 환각을 무기로</strong> — AI 코딩 어시스턴트가 잘못 추천한 존재하지 않는 npm 패키지를 공격자가 선점해 봇넷을 심는 신종 기법이 확인됐다. The Hacker News·SecurityWeek·ZDNet Korea 세 매체가 동시 보도했다.</p>
+</li>
+<li>
+<p><strong>GhostApproval + GitHub 에이전틱 취약점</strong> — Wiz 연구팀은 6개 AI 코딩 에이전트의 심링크 취약점을 공개했고, GitHub 에이전틱 워크플로가 프라이빗 저장소 콘텐츠를 유출할 수 있다는 별개 취약점도 같은 주에 공개됐다. AI 에이전트 신뢰 모델 전반이 흔들리는 주간이었다.</p>
+</li>
+<li>
+<p><strong>미국-영국 정부 AI 보안 정책 집중</strong> — 미국은 중국산 오픈소스 AI 규제 행정명령을 검토하고 CISA가 Claude Mythos로 연방 코드 취약점을 탐지하는 프로그램을 시작했다. 영국은 에이전틱 AI 전용 방어 계획을 산업계 서약과 함께 발표했다.</p>
+</li>
+<li>
+<p><strong>[단독] 카카오톡 소스코드 다크웹 판매 주장</strong> — 국내 최대 메신저 소스코드와 내부망 접근권한이 다크웹에서 판매된다는 주장이 보도됐다. 카카오는 부인했으나 사실 확인이 필요한 상황이다.</p>
+</li>
+</ol>
+<hr>
+<h2 id="_2" class="cat-policy">📋 정책</h2>
+<h3 id="_3">★★★ 핵심</h3>
+<p><strong>AI 기본법 시행령 제정안 — 신뢰 기반 AI 거버넌스 체계화</strong> 🇰🇷<br>
+과기정통부가 AI 기본법 시행령 제정안을 발표했다. 고위험 AI 시스템 정의, 사전 영향평가 의무, 투명성 요건 등 구체적 이행 조항이 포함됐다. 법제화 이후 처음으로 집행 가능한 규제 체계가 마련되는 시점이다.<br>
+출처: <a href="https://msit.go.kr/bbs/view.do?bbsSeqNo=94&amp;mId=307&amp;mPid=208&amp;nttSeqNo=3186490">과기정통부</a> (2026-07-07)</p>
+<p><strong>신뢰 기반 인공지능 데이터 규범, 첫 발 떼다</strong> 🇰🇷<br>
+개인정보보호위원회가 AI 학습·활용 시 개인정보 보호 기준을 담은 'AI 데이터 규범'을 공표했다. 생성형 AI의 학습 데이터 적법성, 자동화 의사결정 거부권, 설명요구권 등이 포함됐다.<br>
+출처: <a href="https://www.pipc.go.kr/np/cop/bbs/selectBoardArticle.do?bbsId=BS074&amp;mCode=C020010000&amp;nttId=9083">개인정보보호위원회</a> (2026-07-09)</p>
+<p><strong>금융위원장 'AI 보안체계 구축·망분리 전면 개선 추진'</strong> 🇰🇷<br>
+금융위원장이 금융권 AI 보안체계 구축과 현행 망분리 규제의 전면 재검토를 공식 선언했다. 클라우드 기반 AI 금융 서비스 확산에 맞춰 규제 체계를 재설계하겠다는 방향성을 제시했다.<br>
+출처: <a href="https://www.dailysecu.com/news/articleView.html?idxno=1">데일리시큐</a> (2026-07-10)</p>
+<p><strong>트럼프 행정부, 중국산 오픈소스 AI 규제 행정명령 검토</strong> 🌐<br>
+미국이 DeepSeek 등 중국산 오픈소스 AI 모델의 사용을 제한하는 행정명령을 검토 중이다. 공급망 차원의 기술 분리 심화가 예상되며, 국내 기업의 AI 모델 선택에도 영향을 줄 수 있다.<br>
+출처: <a href="https://www.aitimes.com/news/articleView.html?idxno=1">AI타임스</a> (2026-07-12)</p>
+<p><strong>오픈AI·구글, 블랙리스트 중국 기업에 모델 우회 허용</strong> 🔀<br>
+미국 안보 블랙리스트에 오른 중국 기업들이 파트너사를 통해 OpenAI·Google AI 모델에 접근하고 있다는 사실이 드러났다. AI 수출통제의 실효성 논란이 본격화되고 있다.<br>
+출처: <a href="https://www.aitimes.com/news/articleView.html?idxno=2">AI타임스</a> (2026-07-10)</p>
+<p><strong>UK Government Rolls Out Agentic AI Defense Plan Alongside Industry Pledge</strong> 🌐<br>
+영국 정부가 에이전틱 AI 전용 사이버 방어 계획을 공개하고 주요 AI 기업들의 안전 서약을 동시에 발표했다. 자율 AI 에이전트가 기업 인프라에 확산되기 전 보안 기준을 선제 수립하는 사례다.<br>
+출처: <a href="https://www.securityweek.com/uk-government-rolls-out-agentic-ai-defense-plan-alongside-industry-pledge/">SecurityWeek</a> (2026-07-10)</p>
+<p><strong>Anthropic Frontier Safety Roadmap 업데이트</strong> 🌐<br>
+앤트로픽이 Claude 헌법(Constitution) 업데이트 정책을 명확화했다. 주요 안전 기준 변경 시 90일 이내 공지 및 외부 검토 절차를 공식화해 AI 거버넌스 투명성 기준을 제시했다.<br>
+출처: <a href="https://www.anthropic.com/responsible-scaling-policy/roadmap">Anthropic</a> (2026-07-10)</p>
+<p><strong>OpenAI Frontier Governance Framework 공개</strong> 🌐<br>
+OpenAI가 사이버 공격·CBRN·통제 손실 등 위험 유형별 관리 프레임워크를 공개했다. 내부 평가 기준, 레드팀 요건, 규제기관 협력 절차 등을 담았다.<br>
+출처: <a href="https://openai.com/index/openai-frontier-governance-framework/">OpenAI</a> (2026-07-09)</p>
+<h3 id="_4">★★ 주목</h3>
+<p><strong>KISA 공급망 보안 인사이트 데이 개최</strong> 🇰🇷<br>
+KISA·과기정통부가 공급망 보안 모델 구축을 논의하는 컨퍼런스를 개최했다. SW SBOM 기반 취약점 관리, 공급망 보안 인증 체계 등 구체적 정책 방향이 발표됐다.<br>
+출처: <a href="https://www.dailysecu.com/news/articleView.html?idxno=21">데일리시큐</a> (2026-07-10)</p>
+<p><strong>LGU+, 차세대 보안 통신 품질 관리 기술 ITU-T 국제표준화</strong> 🇰🇷<br>
+LG유플러스의 보안 통신 품질 관리 기술이 ITU-T 국제표준화 과제로 채택됐다. K-보안 기술이 글로벌 표준으로 진입하는 사례다.<br>
+출처: <a href="https://www.ddaily.co.kr/page/view/2026071209483">디지털데일리</a> (2026-07-12)</p>
+<p><strong>KISA 보안 취약점 클리닝 서비스 시범 운영</strong> 🇰🇷<br>
+KISA가 SBOM 기반 취약점 분석·관리 시스템을 중소기업 대상으로 시범 운영한다. SW 구성요소 목록 기반 취약점 모니터링 서비스를 무료 제공한다.<br>
+출처: <a href="https://www.kisa.or.kr/402/form?postSeq=2550">KISA</a> (2026-07-08)</p>
+<p><strong>하이크비전, 네트워크 카메라로 유럽 EUCC 사이버보안 인증 획득</strong> 🌐<br>
+IoT 카메라 제품이 EU 사이버보안 인증 EUCC를 취득했다. EU 사이버복원력법(CRA) 대응 인증 제품이 확산되는 신호로, 국내 IoT 보안제품 인증 준비에 참고가 된다.<br>
+출처: <a href="https://www.dailysecu.com/news/articleView.html?idxno=46">데일리시큐</a> (2026-07-08)</p>
+<p><strong>오픈AI 안전 책임자 퇴사 — 조직 개편 속 핵심 임원 연쇄 이탈</strong> 🌐<br>
+OpenAI의 안전 총괄 책임자가 조직 개편 과정에서 퇴사했다. AI 안전 조직 리더십 공백이 거버넌스 약화로 이어질 수 있다는 우려가 제기된다.<br>
+출처: <a href="https://www.aitimes.com/news/articleView.html?idxno=25">AI타임스</a> (2026-07-12)</p>
+<h3 id="_5">★ 참고</h3>
+<p><strong>KISA, AI·ICT 분쟁조정 전문인력 양성 MOU</strong> 🇰🇷 — KISA·부산대 법전원 협약으로 AI 분쟁조정 인력 양성 체계 구축.<br>
+출처: <a href="https://www.dailysecu.com/news/articleView.html?idxno=44">데일리시큐</a> (2026-07-09)</p>
+<p><strong>EU CRA 2027년 본격 적용 대응 촉구</strong> 🔀 — EU 사이버복원력법이 2027년부터 본격 적용. 전문가는 현재 준비 속도가 부족하다고 경고.<br>
+출처: <a href="https://www.dailysecu.com/news/articleView.html?idxno=49">데일리시큐</a> (2026-07-13)</p>
+<hr>
+<h2 id="_6" class="cat-industry">🏭 산업</h2>
+<h3 id="_7">★★ 주목</h3>
+<p><strong>이와이엘(EYL), 양자 엔트로피 칩 아시아-북미 공급 — 글로벌 시장 진입</strong> 🇰🇷<br>
+국내 양자보안 반도체 기업 EYL이 아시아·북미 거래처와 B2B 공급 계약을 체결했다. 국내 양자보안 산업이 글로벌 시장에서 실질적 매출을 창출하기 시작한 사례다.<br>
+출처: <a href="https://www.dailysecu.com/news/articleView.html?idxno=38">데일리시큐</a> (2026-07-10)</p>
+<p><strong>Red Hat-IBM, AI 기반 오픈소스 보안 서비스 라이트웰(Lightwell) 출시</strong> 🌐<br>
+IBM·Red Hat이 AI로 오픈소스 취약점을 자동 탐지·패치하는 '라이트웰' 서비스를 출시했다. 엔터프라이즈 오픈소스 공급망 보안 시장에 AI 자동화가 본격 도입되는 시점이다.<br>
+출처: <a href="https://www.dailysecu.com/news/articleView.html?idxno=39">데일리시큐</a> (2026-07-10)</p>
+<p><strong>KT, AI 메일보안 CSAP 인증 취득 — 공공기관 공급</strong> 🇰🇷<br>
+KT의 AI 기반 이메일 보안 솔루션이 CSAP(클라우드 보안 인증)를 취득해 공공·교육기관 공급이 가능해졌다. 공공 이메일 보안 시장에 AI 솔루션 진입이 가속된다.<br>
+출처: <a href="https://www.ddaily.co.kr/page/view/2026071309483">디지털데일리</a> (2026-07-13)</p>
+<p><strong>체크포인트 Engage 2026 — AI 시대 보안 해법 제시 (싱가포르)</strong> 🌐<br>
+체크포인트가 싱가포르에서 개최한 연례 컨퍼런스에서 AI 보안 플랫폼 전략을 발표했다. AI 기반 위협 통합 가시성·자동 대응 솔루션 로드맵이 공개됐다.<br>
+출처: <a href="https://www.ddaily.co.kr/page/view/2026071309483">디지털데일리</a> (2026-07-13)</p>
+<h3 id="_8">★ 참고</h3>
+<p><strong>해킹 털어낸 통신3사, 2분기 실적 회복세</strong> 🇰🇷 — 전년도 사이버 침해 사고 여파를 극복하고 국내 통신3사 2분기 실적이 회복됐다.<br>
+출처: <a href="https://www.ddaily.co.kr/page/view/2026071209483">디지털데일리</a> (2026-07-12)</p>
+<p><strong>금융보안원, '2026 금융 AI Challenge' 개최</strong> 🇰🇷 — 금융권 AI 서비스 아이디어 공모전. AI 금융 보안 생태계 조성 목적.<br>
+출처: <a href="https://www.dailysecu.com/news/articleView.html?idxno=48">데일리시큐</a> (2026-07-13)</p>
+<p><strong>파이오링크, KISA 중소기업 정보보호 지원사업 공급기업 선정</strong> 🇰🇷<br>
+출처: <a href="https://www.dailysecu.com/news/articleView.html?idxno=55">데일리시큐</a> (2026-07-09)</p>
+<p><strong>대교CNS, 한드림넷 인수 — AI·보안 사업 본격화</strong> 🇰🇷 — 교육기업이 네트워크 보안기업을 인수해 AI·보안 사업을 다각화한다.<br>
+출처: <a href="https://www.dailysecu.com/news/articleView.html?idxno=56">데일리시큐</a> (2026-07-09)</p>
+<p><strong>프라이빗에이아이, AI 실행 통제 플랫폼 기업으로 전환</strong> 🇰🇷 — AI 에이전트 실행 거버넌스 전문기업으로 사업 전환. 국내 AI 거버넌스 전문기업 출현.<br>
+출처: <a href="https://www.dailysecu.com/news/articleView.html?idxno=62">데일리시큐</a> (2026-07-09)</p>
+<p><strong>KT 정보보호 자문위원회 출범 — AX 플랫폼 컴퍼니 도약</strong> 🇰🇷<br>
+출처: <a href="https://www.ddaily.co.kr/page/view/2026071209483">디지털데일리</a> (2026-07-12)</p>
+<hr>
+<h2 id="_9" class="cat-tech">🔬 기술</h2>
+<h3 id="_10">★★★ 핵심 위협·취약점</h3>
+<p><strong>HalluSquatting — AI 환각을 봇넷 배포 수단으로</strong> 🌐<br>
+공격자가 AI 코딩 어시스턴트의 환각(hallucination) 패턴을 분석해 존재하지 않는 패키지 이름을 미리 점령한 뒤 봇넷을 심는 기법이 확인됐다. AI가 추천한 패키지를 그대로 설치하는 개발자 워크플로 전체가 공격 벡터가 된다.<br>
+출처: <a href="https://zdnet.co.kr/view/?no=1">ZDNet Korea</a> (2026-07-13), <a href="https://www.securityweek.com/hallusquatting-turns-ai-hallucinations-into-botnet-delivery-mechanism/">SecurityWeek</a> (2026-07-10), <a href="https://thehackernews.com/2026/07/hallusquatting-ai-coding-assistants.html">The Hacker News</a> (2026-07-08)</p>
+<p><strong>보안 목적 AI 에이전트가 역으로 악성코드 실행</strong> 🌐<br>
+악성코드를 탐지하도록 설계된 AI 에이전트가 적절히 구성된 프롬프트로 인해 직접 악성코드를 실행하도록 유도될 수 있다는 연구가 공개됐다. AI 에이전트에 부여된 실행 권한 자체가 위험 요소다.<br>
+출처: <a href="https://thehackernews.com/2026/07/top-ai-agents-built-to-catch-malicious.html">The Hacker News</a> (2026-07-09)</p>
+<p><strong>GhostApproval — 6개 AI 코딩 에이전트의 심링크 취약점</strong> 🌐<br>
+Wiz 연구팀이 GitHub Copilot, Cursor, Cline 등 6개 AI 코딩 에이전트에서 심링크(Symlink) 취약점을 발견했다. 악성 저장소가 AI 에이전트의 권한으로 호스트 시스템에서 코드를 실행할 수 있다.<br>
+출처: <a href="https://thehackernews.com/2026/07/ghostapproval-symlink-flaws.html">The Hacker News</a> (2026-07-09)</p>
+<p><strong>GitHub Copilot 채팅 필터 우회 — 코드 생성 경로로 악용</strong> 🌐<br>
+GitHub Copilot이 채팅 창에서는 거부하는 유해 요청을 코드 생성 경로(인라인 제안)를 통해 이행할 수 있다는 취약점이 공개됐다. 안전 필터 우회 패턴이 AI 코딩 도구 전반에 존재한다.<br>
+출처: <a href="https://thehackernews.com/2026/07/github-copilot-refuses-harmful-requests.html">The Hacker News</a> (2026-07-08)</p>
+<p><strong>GitHub 에이전틱 워크플로 — 프라이빗 저장소 유출 벡터</strong> 🌐<br>
+공개 GitHub 이슈를 통해 에이전틱 워크플로를 조작, 프라이빗 저장소 콘텐츠를 외부로 유출시킬 수 있는 취약점이 보고됐다. AI 에이전트에 부여된 저장소 접근 권한의 경계 설정이 시급하다.<br>
+출처: <a href="https://thehackernews.com/2026/07/github-agentic-workflows-leaking.html">The Hacker News</a> (2026-07-07)</p>
+<p><strong>Writer AI 세션 토큰 교차 누출 — 멀티테넌트 취약점</strong> 🌐<br>
+AI 기반 콘텐츠 플랫폼 Writer의 에이전트 미리보기 기능에서 세션 토큰이 다른 테넌트로 누출될 수 있는 설계 결함이 발견됐다. 멀티테넌트 AI SaaS의 격리 설계를 재점검해야 한다.<br>
+출처: <a href="https://thehackernews.com/2026/07/writer-ai-flaw-session-tokens.html">The Hacker News</a> (2026-07-07)</p>
+<p><strong>CVE-2026-4349 GhostLock — 15년 된 Linux 취약점, root·컨테이너 탈출</strong> 🌐<br>
+15년간 미발견된 Linux 커널 취약점이 공개됐다. 대부분의 배포판에서 root 권한 획득 및 컨테이너 탈출이 가능하며, AI 인프라를 포함한 광범위한 Linux 서버 환경에 영향을 미친다.<br>
+출처: <a href="https://thehackernews.com/2026/07/ghostlock-cve-2026-4349.html">The Hacker News</a> (2026-07-08)</p>
+<p><strong>CISA + 앤트로픽 미토스(Mythos) — 연방 코드 취약점 자동 탐지</strong> 🌐<br>
+CISA가 앤트로픽 Claude Mythos 모델을 활용해 미국 연방정부 소프트웨어의 취약점을 자동 탐지하는 프로그램을 시작했다. AI 기반 취약점 연구의 공공 부문 도입 최초 대규모 사례다.<br>
+출처: <a href="https://www.dailysecu.com/news/articleView.html?idxno=9">데일리시큐</a> (2026-07-10)</p>
+<p><strong>Claude Mythos: 수천 개 미공개 취약점 OS·브라우저·오픈소스서 발견</strong> 🌐<br>
+앤트로픽이 공개한 Mythos Preview 결과에 따르면 Linux 커널, 주요 브라우저, 오픈소스 라이브러리에서 수천 개의 신규 취약점이 발견됐다. AI가 대규모 취약점 분석을 수행하는 패러다임 전환이다.<br>
+출처: <a href="https://www.anthropic.com/responsible-scaling-policy/roadmap">Anthropic</a> (2026-07-10)</p>
+<p><strong>OpenAI, 사이버 방어용 GPT 모델 신뢰 접근 확대</strong> 🌐<br>
+OpenAI가 GPT-5.2~5.4 기반 사이버 방어 특화 모델에 대한 신뢰 접근(Trusted Access) 프로그램을 공개했다. 고위험 사이버 방어 역량을 보안 연구자에게 공식 개방했다.<br>
+출처: <a href="https://openai.com/index/scaling-trusted-access-for-cyber-defense/">OpenAI</a> (2026-07-10)</p>
+<h3 id="_11">★★ 주목</h3>
+<p><strong>AI 코딩 에이전트, 보안 솔루션에서 공격으로 탐지</strong> 🌐<br>
+Sophos 연구팀이 AI 코딩 에이전트의 정상 파일 쓰기·실행 동작이 EDR·엔드포인트 보안 규칙을 실제 공격자처럼 트리거한다는 사실을 발견했다. AI 도구 도입 시 보안 정책 충돌이 빈발할 전망이다.<br>
+출처: <a href="https://www.dailysecu.com/news/articleView.html?idxno=23">데일리시큐</a> (2026-07-09), <a href="https://thehackernews.com/2026/07/ai-coding-agents-endpoint-security.html">The Hacker News</a> (2026-07-08)</p>
+<p><strong>Critical Zimbra — 악성 이메일로 코드 실행 가능</strong> 🌐<br>
+Zimbra 이메일 서버의 Critical 취약점이 공개됐다. 특수하게 작성된 이메일만으로 수신자 세션에서 임의 코드를 실행할 수 있다. 정부·기업 Zimbra 운영 환경 긴급 패치 필요.<br>
+출처: <a href="https://thehackernews.com/2026/07/critical-zimbra-flaw.html">The Hacker News</a> (2026-07-11)</p>
+<p><strong>Progress ShareFile 긴급 스토리지 컨트롤러 셧다운 권고</strong> 🌐<br>
+Progress의 ShareFile 제품에서 심각한 취약점이 발견되어 스토리지 컨트롤러 즉시 셧다운을 권고하는 수준의 긴급 보안 공지가 발표됐다.<br>
+출처: <a href="https://thehackernews.com/2026/07/progress-sharefile-urgent.html">The Hacker News</a> (2026-07-10)</p>
+<p><strong>MODBEACON RAT — gRPC 암호화 C2 (Silver Fox)</strong> 🌐<br>
+중국 연계 위협 행위자 Silver Fox가 gRPC 스트리밍을 이용해 탐지를 우회하는 신형 원격 접근 트로이(RAT) MODBEACON을 배포 중이다. 기존 시그니처 기반 탐지가 어렵다.<br>
+출처: <a href="https://thehackernews.com/2026/07/modbeacon-rat-silver-fox.html">The Hacker News</a> (2026-07-10)</p>
+<p><strong>GodDamn 랜섬웨어 — PoisonX 드라이버로 EDR 무력화</strong> 🌐<br>
+새 랜섬웨어 GodDamn이 서명된 드라이버(PoisonX)를 이용해 엔드포인트 보안을 비활성화하는 BYOVD 기법을 사용한다. BYOVD 랜섬웨어 공격이 더욱 정교해지고 있다.<br>
+출처: <a href="https://thehackernews.com/2026/07/goddamn-ransomware.html">The Hacker News</a> (2026-07-09)</p>
+<p><strong>China-Linked UAT-7810 — LONGLEASH 악성코드 + ORB 네트워크 확장</strong> 🌐<br>
+중국 연계 APT UAT-7810이 ORB(Operational Relay Box) 인프라를 확장하며 신형 악성코드 LONGLEASH를 배포하고 있다. 외교·정부 부문이 주요 타깃이다.<br>
+출처: <a href="https://thehackernews.com/2026/07/uat-7810-longleash.html">The Hacker News</a> (2026-07-08)</p>
+<p><strong>BeyondTrust 원격 지원 솔루션 Critical 인증 우회 취약점</strong> 🌐<br>
+BeyondTrust의 Remote Support 및 PRA(Privileged Remote Access) 제품에서 Critical 수준의 인증 우회 취약점이 패치됐다. 특권 접근 관리 솔루션 자체가 침해 경로가 될 수 있다.<br>
+출처: <a href="https://thehackernews.com/2026/07/beyondtrust-auth-bypass.html">The Hacker News</a> (2026-07-07)</p>
+<p><strong>이란 연계 해커, Cavern C2 프레임워크로 이스라엘 타깃</strong> 🌐<br>
+MOIS 연계 해킹 그룹이 암호화 통신을 활용하는 새 C2 프레임워크 'Cavern'을 사용해 이스라엘 조직을 공격하고 있다.<br>
+출처: <a href="https://thehackernews.com/2026/07/iran-cavern-c2.html">The Hacker News</a> (2026-07-07)</p>
+<p><strong>200개 GitHub 저장소를 이용한 악성코드 감염 인프라</strong> 🌐<br>
+공격자가 200개의 GitHub 저장소를 연결해 악성코드 배포 네트워크를 구축했다. 오픈소스 생태계를 이용한 공급망 공격 인프라가 점점 정교해지고 있다.<br>
+출처: <a href="https://www.securityweek.com/200-github-repos-malware/">SecurityWeek</a> (2026-07-10)</p>
+<p><strong>CISA KEV에 Adobe·Joomla·Langflow(AI 워크플로) 취약점 4건 추가</strong> 🌐<br>
+CISA가 실제 악용이 확인된 취약점 4건을 KEV 목록에 추가했다. AI 워크플로 플랫폼 Langflow의 취약점이 포함돼 AI 인프라가 실제 공격 대상이 되고 있음을 확인했다.<br>
+출처: <a href="https://thehackernews.com/2026/07/cisa-kev-adobe-joomla-langflow.html">The Hacker News</a> (2026-07-08)</p>
+<p><strong>CERT/CC, Tenda 라우터 숨겨진 관리자 백도어 경고</strong> 🌐<br>
+Tenda 라우터 펌웨어에서 제조사가 심어놓은 히든 관리자 백도어가 발견됐다. CERT/CC가 공식 경고를 발표했으며 네트워크 장비 공급망 보안 우려가 재점화됐다.<br>
+출처: <a href="https://thehackernews.com/2026/07/tenda-router-backdoor.html">The Hacker News</a> (2026-07-07)</p>
+<p><strong>구글 클라우드 AI 보안 에이전트 솔루션 구축</strong> 🌐<br>
+구글 클라우드가 AI 에이전트로 사이버 위협을 탐지·대응하는 보안 솔루션 아키텍처를 공개했다. AI로 AI 위협에 대응하는 자동화 보안 시장의 주요 전략 발표다.<br>
+출처: <a href="https://themiilk.com/articles/a3942e512">더밀크</a> (2026-07-10)</p>
+<h3 id="_12">★ 참고</h3>
+<p><strong>SCMBANKER — ClickFix 기반 멕시코 뱅킹 악성코드</strong> 🌐 — ClickFix 사회공학 기법을 이용한 뱅킹 사기 악성코드. 새 피싱 기법 확산.<br>
+출처: <a href="https://thehackernews.com/2026/07/scmbanker-malware.html">The Hacker News</a> (2026-07-08)</p>
+<p><strong>RedWing MaaS — 텔레그램 기반 안드로이드 뱅킹 사기 임대</strong> 🌐 — 텔레그램으로 배포되는 MaaS(서비스형 악성코드) 사이버범죄 서비스화 심화.<br>
+출처: <a href="https://thehackernews.com/2026/07/redwing-maas.html">The Hacker News</a> (2026-07-07)</p>
+<hr>
+<h2 id="_13" class="cat-incident">🚨 사고·사건</h2>
+<h3 id="_14">★★★ 핵심</h3>
+<p><strong>[단독] 다크웹에 '카카오톡 소스코드 판매' 주장</strong> 🇰🇷<br>
+다크웹 포럼에서 카카오톡 소스코드와 내부망 접근권한을 판매한다는 글이 올라왔다. 카카오 측은 사실이 아니라고 부인했지만, 실제 유출 여부 확인이 진행 중이다. 국내 최대 메신저 플랫폼 대상 내부 위협 또는 공급망 침해 가능성이 제기됐다.<br>
+출처: <a href="https://www.dailysecu.com/news/articleView.html?idxno=18">데일리시큐</a> (2026-07-09)</p>
+<h3 id="_15">★★ 주목</h3>
+<p><strong>일 블룸(일몰) 취약점 악용 — 암호화폐 지갑 431개서 500만달러 탈취</strong> 🌐<br>
+블록체인 지갑 복구 문구(시드 구문) 예측 취약점이 실제 공격에 악용돼 431개 지갑에서 약 500만달러가 탈취됐다. 암호화폐 지갑 복구 문구 취약점의 실제 피해 사례다.<br>
+출처: <a href="https://www.dailysecu.com/news/articleView.html?idxno=26">데일리시큐</a> (2026-07-11)</p>
+<p><strong>랜섬웨어 협상가, 블랙캣과 결탁해 징역 70개월</strong> 🌐<br>
+피해 기업을 대신해 협상하던 중재인이 블랙캣(ALPHV) 랜섬웨어 조직과 공모해 몸값 일부를 착복한 사실이 밝혀져 징역 70개월을 선고받았다.<br>
+출처: <a href="https://www.dailysecu.com/news/articleView.html?idxno=27">데일리시큐</a> (2026-07-11)</p>
+<p><strong>락앤락 130만명 개인정보 유출</strong> 🇰🇷<br>
+국내 소비재 기업 락앤락의 고객 개인정보 130만명 분이 유출됐다. 중소·소비재 기업의 보안 인프라 취약성을 재확인했다.<br>
+출처: <a href="https://www.ddaily.co.kr/page/view/2026071109483">디지털데일리</a> (2026-07-11)</p>
+<p><strong>가짜 Microsoft Entra Passkey 등록 피싱으로 M365 접근</strong> 🌐<br>
+공격자가 가짜 MS Entra Passkey 등록 페이지를 통해 피해자 계정에 자체 패스키를 등록, M365에 영구 접근권을 확보하는 새 피싱 기법이 확인됐다.<br>
+출처: <a href="https://thehackernews.com/2026/07/fake-entra-passkey.html">The Hacker News</a> (2026-07-10)</p>
+<p><strong>파키스탄 경찰 포털 무기화 — 다중 그룹 사이버 스파이</strong> 🌐<br>
+복수의 APT 그룹이 파키스탄 발루치스탄 경찰 포털을 공동 악용해 사이버 스파이 활동을 수행하고 있다. 공공 포털이 APT 공급망 공격 거점으로 활용되는 사례다.<br>
+출처: <a href="https://thehackernews.com/2026/07/balochistan-police-portal-espionage.html">The Hacker News</a> (2026-07-11)</p>
+<p><strong>미국 보험사 어슈어런스아메리카, 700만명 개인정보 유출</strong> 🌐<br>
+미국 자동차보험사가 사이버 공격으로 고객 700만명의 개인정보를 침해당했다. 금융·보험 부문 대형 침해 사례가 이어지고 있다.<br>
+출처: <a href="https://www.dailysecu.com/news/articleView.html?idxno=41">데일리시큐</a> (2026-07-09)</p>
+<p><strong>Injective Labs GitHub 해킹 — 지갑 키 탈취 npm 패키지 유포</strong> 🌐<br>
+블록체인 인프라 기업 Injective Labs의 GitHub 저장소가 해킹돼, 사용자 지갑 개인키를 탈취하는 악성 npm 패키지가 유포됐다. 오픈소스 공급망 공격의 실제 피해 사례다.<br>
+출처: <a href="https://thehackernews.com/2026/07/injective-labs-github.html">The Hacker News</a> (2026-07-10)</p>
+<p><strong>중국 연계 해커, Roundcube 취약점으로 대학 기관 공격</strong> 🌐<br>
+중국 연계 해킹 그룹이 Roundcube 웹메일 서버 취약점을 악용해 대학 기관을 대상으로 사이버 스파이 활동을 수행하고 있다.<br>
+출처: <a href="https://thehackernews.com/2026/07/roundcube-china-hackers.html">The Hacker News</a> (2026-07-07)</p>
+<hr>
+<h2 id="_16" class="cat-research">📚 연구</h2>
+<p><strong>ICML 2026 핵심 의제 — '확산형 언어모델' 연구 및 AI 신뢰성·안전성</strong> 🌐<br>
+ICML 2026에서 AI 모델 신뢰성·안전성 연구가 핵심 의제로 부상했다. 확산형 언어모델(Diffusion LM) 연구와 AI 안전성 벤치마크가 주요 트렌드로 보고됐다.<br>
+출처: <a href="https://www.ddaily.co.kr/page/view/2026071212483">디지털데일리</a> (2026-07-12)</p>
+<p><strong>육사, AI 연구로 국방 AI 보안 선도 — 국제학술지 논문 발표</strong> 🇰🇷<br>
+육군사관학교 AI 연구팀이 국방 AI 보안 분야 논문을 국제 학술지에 게재했다. 국방 부문 AI 보안 연구 역량이 성장하고 있다.<br>
+출처: <a href="https://www.aitimes.com/news/articleView.html?idxno=53">AI타임스</a> (2026-07-10)</p>
+<hr>
+<h2 id="dart">📊 보안기업 동향 (DART 사업보고서)</h2>
+<blockquote>
+<p>기준: FY2025 연결 재무제표 | 캐시 생성일: 2026-07-06 | 상장 25개사 + 비상장 6개사 (37개사 중 NOISE_FLOOR ≥ 1억원 적용)</p>
+</blockquote>
+<h3 id="top-3">매출 ↑ TOP 3</h3>
+<table>
+<thead>
+<tr>
+<th>순위</th>
+<th>기업</th>
+<th>종목코드</th>
+<th>당기 (억)</th>
+<th>전기 (억)</th>
+<th>증감률</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>한컴위드</td>
+<td>054920</td>
+<td>7,712</td>
+<td>4,482</td>
+<td><strong>▲72.1%</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td>소프트캠프</td>
+<td>258790</td>
+<td>257</td>
+<td>169</td>
+<td><strong>▲52.3%</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td>에스지에이솔루션즈</td>
+<td>184230</td>
+<td>616</td>
+<td>429</td>
+<td><strong>▲43.6%</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="top-3_1">매출 ↓ TOP 3</h3>
+<table>
+<thead>
+<tr>
+<th>순위</th>
+<th>기업</th>
+<th>종목코드</th>
+<th>당기 (억)</th>
+<th>전기 (억)</th>
+<th>증감률</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>아이씨티케이</td>
+<td>456010</td>
+<td>40</td>
+<td>67</td>
+<td><strong>▼39.8%</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td>싸이버원</td>
+<td>356890</td>
+<td>337</td>
+<td>479</td>
+<td><strong>▼29.5%</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td>이니텍</td>
+<td>053350</td>
+<td>328</td>
+<td>389</td>
+<td><strong>▼15.6%</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="top-3_2">영업이익 변동폭 TOP 3 (|등락률| 기준)</h3>
+<table>
+<thead>
+<tr>
+<th>순위</th>
+<th>기업</th>
+<th>종목코드</th>
+<th>당기 (억)</th>
+<th>전기 (억)</th>
+<th>변동률</th>
+<th>비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>이니텍</td>
+<td>053350</td>
+<td>-23.9</td>
+<td>+2.3</td>
+<td>▼1,139%</td>
+<td>적자전환</td>
+</tr>
+<tr>
+<td>2</td>
+<td>에스지에이솔루션즈</td>
+<td>184230</td>
+<td>+148.2</td>
+<td>-41.1</td>
+<td>▲461%</td>
+<td>흑자전환</td>
+</tr>
+<tr>
+<td>3</td>
+<td>한컴위드</td>
+<td>054920</td>
+<td>+60.9</td>
+<td>+12.8</td>
+<td>▲376%</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>한컴위드의 매출 급증(+72%)은 계열사 연결 기준 변경 영향이 포함될 수 있어 단순 비교에 주의. 이니텍 영업이익 적자전환은 전기 이익이 2.3억으로 소규모였으나 당기 -23.9억으로 반전.</p>
+</blockquote>
+<hr>
+<h2 id="_17">📊 보안기업 주가 큰 변동 + 원인</h2>
+<blockquote>
+<p>윈도우: 2026-07-07 ~ 2026-07-13 · 총 45건 변동 · 매핑 4건 (9%)
+기준: 등락률 ±3% OR 거래량 평균 ×2배. 매핑 윈도우: 변동일 ±1일.</p>
+</blockquote>
+<h3 id="4">🔍 매핑된 변동 (4건)</h3>
+<p>📈 <strong>소프트캠프</strong> (258790) +6.84% (2026-07-10) · 종가 4,295원
+  - 📄 DART 20260710 <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260710000213">[첨부정정]주요사항보고서(전환사채권발행결정)</a></p>
+<p>📈 <strong>한국정보인증</strong> (053300) +6.05% (2026-07-10) · 종가 4,295원
+  - 📄 DART 20260710 <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260710000038">신탁계약에의한취득상황보고서</a></p>
+<p>📉 <strong>소프트캠프</strong> (258790) -3.13% (2026-07-09) · 종가 4,020원
+  - 📄 DART 20260710 <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260710000213">[첨부정정]주요사항보고서(전환사채권발행결정)</a></p>
+<p>📉 <strong>한컴위드</strong> (054920) -3.70% (2026-07-08) · 거래량 3.0배 · 종가 2,995원
+  - 📄 DART 20260707 <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260707900541">[기재정정]타법인주식및출자증권취득결정</a></p>
+<h3 id="5">❓ 매핑 없는 큰 변동 (|등락률| 상위 5건)</h3>
+<blockquote>
+<p>시장 전반 동조·외부 요인 추정. 원인 불명 — 직접 확인 권장.</p>
+</blockquote>
+<ul>
+<li>📈 <strong>소프트캠프</strong> (258790) +11.41% (2026-07-08) · 거래량 2.2배 · 종가 4,150원</li>
+<li>📈 <strong>아이씨티케이</strong> (456010) +9.98% (2026-07-10) · 종가 16,090원</li>
+<li>📈 <strong>한컴위드</strong> (054920) +9.38% (2026-07-10) · 종가 3,150원</li>
+<li>📉 <strong>소프트캠프</strong> (258790) -9.08% (2026-07-13) · 종가 3,905원</li>
+<li>📈 <strong>싸이버원</strong> (356890) +8.87% (2026-07-10) · 종가 2,270원</li>
+</ul>
+<p><em>출처: 한국거래소(KRX) 일별 OHLCV (pykrx) + 1번 직원 동향 + DART 공시 list.json.</em></p>
+<hr>
+<h2 id="_18">📈 수집 통계</h2>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>수치</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>원본 수집 (7일 윈도우 키워드 히트)</td>
+<td>112건</td>
+</tr>
+<tr>
+<td>관련성 통과 (AI보안 도메인)</td>
+<td>63건</td>
+</tr>
+<tr>
+<td>정책</td>
+<td>15건</td>
+</tr>
+<tr>
+<td>산업</td>
+<td>10건</td>
+</tr>
+<tr>
+<td>기술</td>
+<td>27건</td>
+</tr>
+<tr>
+<td>사고·사건</td>
+<td>9건</td>
+</tr>
+<tr>
+<td>연구</td>
+<td>2건</td>
+</tr>
+<tr>
+<td>우선순위 ★★★</td>
+<td>19건</td>
+</tr>
+<tr>
+<td>우선순위 ★★</td>
+<td>32건</td>
+</tr>
+<tr>
+<td>우선순위 ★</td>
+<td>12건</td>
+</tr>
+<tr>
+<td>국내 🇰🇷</td>
+<td>28건</td>
+</tr>
+<tr>
+<td>국제 🌐</td>
+<td>28건</td>
+</tr>
+<tr>
+<td>혼합 🔀</td>
+<td>7건</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_19">📁 출처 목록</h2>
+<table>
+<thead>
+<tr>
+<th>매체</th>
+<th>건수</th>
+<th>유형</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>데일리시큐</td>
+<td>21</td>
+<td>국내 보안 미디어</td>
+</tr>
+<tr>
+<td>The Hacker News</td>
+<td>20</td>
+<td>해외 출처</td>
+</tr>
+<tr>
+<td>디지털데일리</td>
+<td>8</td>
+<td>국내 보안 미디어</td>
+</tr>
+<tr>
+<td>AI타임스</td>
+<td>4</td>
+<td>국내 AI·산업 미디어</td>
+</tr>
+<tr>
+<td>SecurityWeek</td>
+<td>3</td>
+<td>해외 출처</td>
+</tr>
+<tr>
+<td>ZDNet Korea</td>
+<td>1</td>
+<td>국내 AI·산업 미디어</td>
+</tr>
+<tr>
+<td>과기정통부</td>
+<td>1</td>
+<td>국내 정부·공공</td>
+</tr>
+<tr>
+<td>개인정보보호위원회</td>
+<td>1</td>
+<td>국내 정부·공공</td>
+</tr>
+<tr>
+<td>KISA</td>
+<td>1</td>
+<td>국내 정부·공공</td>
+</tr>
+<tr>
+<td>Anthropic</td>
+<td>2</td>
+<td>해외 출처</td>
+</tr>
+<tr>
+<td>OpenAI</td>
+<td>2</td>
+<td>해외 출처</td>
+</tr>
+<tr>
+<td>더밀크</td>
+<td>1</td>
+<td>해외 출처</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>생성: weekly-report-writer v1 | 파이프라인: news-feed-collector → ai-security-triage → weekly-report-writer</em><br>
+<em>triage: output/raw/triage-weekly-2026-07-13.json | filtered: output/raw/filtered-weekly-2026-07-13.json</em></p>
+  </article>
+
+  <section class="comments-section">
+    <h2>💬 댓글</h2>
+    <div id="comments-root"><div class="comments-disabled">댓글 시스템 미설정.</div></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div>Javis · 자동 생성 · 2026-07-22 15:12 빌드</div>
+</footer>
+
+<script>window.JAVIS_CONFIG = {"kakao_app_key": "", "share_image": "", "turnstile_site_key": "", "comments_api_base": ""};</script>
+<script src="../assets/share.js"></script>
+<script src="../assets/comments.js"></script>
+</body>
+</html>

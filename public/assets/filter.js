@@ -49,6 +49,6 @@
   // Init from URL
   var p = new URLSearchParams(window.location.search);
   var k = p.get('kind');
-  if (k === 'weekly' || k === 'daily') active = k;
+  if (k === 'weekly' || k === 'daily' || k === 'cardnews') active = k;
   apply();
 })();

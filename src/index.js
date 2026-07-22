@@ -75,16 +75,12 @@ async function postComment(request, env) {
     return jsonResponse({ error: `comment too long (max ${MAX_BODY})` }, 400);
   }
 
-  if (!env.TURNSTILE_SECRET) {
-    return jsonResponse(
-      { error: 'server not configured (TURNSTILE_SECRET missing)' },
-      503
-    );
-  }
   const ip = request.headers.get('CF-Connecting-IP') || '';
-  const ok = await verifyTurnstile(turnstileToken, ip, env);
-  if (!ok) {
-    return jsonResponse({ error: 'captcha verification failed' }, 403);
+  if (env.TURNSTILE_SECRET) {
+    const ok = await verifyTurnstile(turnstileToken, ip, env);
+    if (!ok) {
+      return jsonResponse({ error: 'captcha verification failed' }, 403);
+    }
   }
 
   const createdAt = new Date().toISOString();

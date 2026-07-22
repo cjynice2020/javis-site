@@ -304,11 +304,11 @@ img { max-width: 100%; height: auto; }
 .item-tag.cardnews { background: #fff3e8; color: #c2660a; }
 
 /* ---- 카드뉴스 페이지 (정사각형 카드 스택) ---- */
-body.cn-body { background: #e0e0e0; }
+body.cn-body { background: #111318; }
 
 .cn-main {
   display: flex; flex-direction: column; align-items: center;
-  gap: 20px; padding: 20px 16px 48px;
+  gap: 24px; padding: 20px 16px 60px;
 }
 
 .cn-nav-bar {
@@ -316,104 +316,127 @@ body.cn-body { background: #e0e0e0; }
   display: flex; align-items: center; justify-content: space-between;
   font-size: 0.86em;
 }
-.cn-nav-bar a { color: var(--c-accent); text-decoration: none; }
-.cn-nav-bar a:hover { text-decoration: underline; }
+.cn-nav-bar a { color: rgba(255,255,255,0.55); text-decoration: none; }
+.cn-nav-bar a:hover { color: #fff; text-decoration: none; }
 
 /* 정사각형 카드 */
 .cn-card {
   width: 540px; max-width: calc(100vw - 32px);
   aspect-ratio: 1 / 1;
-  background: #fff; border-radius: 10px;
-  box-shadow: inset 0 0 0 5px #ccc;
-  padding: 28px 30px 22px;
+  border-radius: 14px;
+  padding: 32px 34px 26px;
   display: flex; flex-direction: column;
   justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.55);
+  background: #1a2740;
 }
 
-/* 카테고리별 inset border 색상 */
-.cn-card.cat-policy   { box-shadow: inset 0 0 0 5px #4186BF; }
-.cn-card.cat-industry { box-shadow: inset 0 0 0 5px #4DABAD; }
-.cn-card.cat-tech     { box-shadow: inset 0 0 0 5px #22c55e; }
-.cn-card.cat-incident { box-shadow: inset 0 0 0 5px #FF6B6B; }
-.cn-card.cat-research { box-shadow: inset 0 0 0 5px #FFC000; }
+/* 상단 액센트 바 */
+.cn-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  border-radius: 14px 14px 0 0;
+}
+.cn-card.cat-policy::before   { background: #4186BF; }
+.cn-card.cat-industry::before { background: #4DABAD; }
+.cn-card.cat-tech::before     { background: #22c55e; }
+.cn-card.cat-incident::before { background: #FF6B6B; }
+.cn-card.cat-research::before { background: #FFC000; }
+.cn-cover::before   { background: linear-gradient(90deg, #4A90D9 0%, #7B63C8 100%); }
+.cn-closing::before { background: rgba(255,255,255,0.1); }
+
+/* 카테고리별 배경 */
+.cn-card.cat-policy   { background: linear-gradient(145deg, #152b52 0%, #1c3666 100%); }
+.cn-card.cat-industry { background: linear-gradient(145deg, #0e3330 0%, #17413e 100%); }
+.cn-card.cat-tech     { background: linear-gradient(145deg, #0d3b20 0%, #155230 100%); }
+.cn-card.cat-incident { background: linear-gradient(145deg, #5c1414 0%, #7a1d1d 100%); }
+.cn-card.cat-research { background: linear-gradient(145deg, #4a2800 0%, #6b3a0a 100%); }
 
 /* 커버 카드 */
-.cn-cover {
-  background: #1a2740;
-  box-shadow: inset 0 0 0 5px #4A90D9;
-}
+.cn-cover { background: linear-gradient(145deg, #0b1525 0%, #1a2740 60%, #1f3255 100%); }
 
 /* 마감 CTA 카드 */
-.cn-closing {
-  background: #f3f4f6;
-  box-shadow: inset 0 0 0 5px #d1d5db;
+.cn-closing { background: linear-gradient(145deg, #16213e 0%, #1a2540 100%); }
+
+/* 대형 장식 숫자 */
+.cn-card-num {
+  position: absolute;
+  right: -6px; bottom: -30px;
+  font-size: 220px; font-weight: 900; line-height: 1;
+  color: rgba(255,255,255,0.055);
+  user-select: none; pointer-events: none;
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
 }
 
 /* 카드 내부 레이아웃 */
 .cn-card-top {
-  display: flex; align-items: flex-start; justify-content: space-between;
-  gap: 8px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 8px; position: relative; z-index: 1;
 }
 .cn-card-mid {
   flex: 1; display: flex; flex-direction: column; justify-content: center;
-  gap: 12px; padding: 14px 0;
+  gap: 14px; padding: 10px 0;
+  position: relative; z-index: 1;
 }
 
 /* 타이포그래피 */
 .cn-series {
-  font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
-  text-transform: uppercase; color: rgba(255,255,255,0.55);
+  font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: rgba(255,255,255,0.38);
 }
+
+/* 카테고리 레이블 칩 */
 .cn-eyebrow {
-  font-size: 11px; font-weight: 700; letter-spacing: 0.06em;
-  text-transform: uppercase; color: var(--c-muted);
+  display: inline-block;
+  padding: 5px 13px; border-radius: 20px;
+  font-size: 11px; font-weight: 800; letter-spacing: 0.07em;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.14); color: rgba(255,255,255,0.85);
 }
-.cat-policy .cn-eyebrow   { color: #4186BF; }
-.cat-industry .cn-eyebrow { color: #4DABAD; }
-.cat-tech .cn-eyebrow     { color: #22c55e; }
-.cat-incident .cn-eyebrow { color: #FF6B6B; }
-.cat-research .cn-eyebrow { color: #FFC000; }
-.cn-closing .cn-eyebrow   { color: var(--c-muted); }
+.cn-card.cat-policy   .cn-eyebrow { background: #4186BF; color: #fff; }
+.cn-card.cat-industry .cn-eyebrow { background: #3d9896; color: #fff; }
+.cn-card.cat-tech     .cn-eyebrow { background: #16a34a; color: #fff; }
+.cn-card.cat-incident .cn-eyebrow { background: #dc2626; color: #fff; }
+.cn-card.cat-research .cn-eyebrow { background: #d97706; color: #fff; }
+.cn-closing .cn-eyebrow           { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.55); }
 
 .cn-cover-title {
-  font-size: 26px; font-weight: 900; line-height: 1.3;
+  font-size: 28px; font-weight: 900; line-height: 1.3;
   color: #fff; margin: 0; text-wrap: balance;
 }
-.cn-cover-sub {
-  font-size: 13px; color: rgba(255,255,255,0.55); margin: 0;
-}
+.cn-cover-sub { font-size: 14px; color: rgba(255,255,255,0.45); margin: 0; }
+
 .cn-card-headline {
-  font-size: 22px; font-weight: 800; line-height: 1.4;
-  color: #111; margin: 0; text-wrap: balance;
+  font-size: 28px; font-weight: 800; line-height: 1.4;
+  color: #fff; margin: 0; text-wrap: balance;
 }
-.cn-card-body {
-  font-size: 14px; color: #555; line-height: 1.65; margin: 0;
-}
-.cn-no-news {
-  font-size: 15px; color: #aaa; font-style: italic; margin: 0;
-}
+.cn-card-body { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.7; margin: 0; }
+.cn-no-news   { font-size: 16px; color: rgba(255,255,255,0.25); font-style: italic; margin: 0; }
+
 .cn-closing-text {
-  font-size: 20px; font-weight: 700; color: #444; margin: 0; line-height: 1.4;
+  font-size: 22px; font-weight: 700; color: #fff; margin: 0; line-height: 1.45;
 }
 .cn-cta-btn {
-  display: inline-block; background: #1a2740; color: #fff;
-  padding: 12px 24px; border-radius: 6px; font-size: 15px; font-weight: 700;
-  text-decoration: none; margin-top: 12px; transition: filter 0.12s;
+  display: inline-block; background: #fff; color: #111;
+  padding: 14px 28px; border-radius: 8px; font-size: 15px; font-weight: 800;
+  text-decoration: none; margin-top: 14px; transition: filter 0.12s;
 }
-.cn-cta-btn:hover { filter: brightness(1.15); text-decoration: none; }
+.cn-cta-btn:hover { filter: brightness(0.9); text-decoration: none; }
 
 /* 로고 행 */
 .cn-logo-row {
   display: flex; align-items: center; justify-content: space-between;
-  border-top: 1px solid rgba(0,0,0,0.07); padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,0.1); padding-top: 14px;
+  position: relative; z-index: 1;
 }
-.cn-cover .cn-logo-row { border-top-color: rgba(255,255,255,0.15); }
-.cn-logo-mark { font-size: 12px; font-weight: 700; color: #333; }
-.cn-cover .cn-logo-mark { color: rgba(255,255,255,0.75); }
-.cn-closing .cn-logo-mark { color: #555; }
-.cn-logo-date { font-size: 11px; color: rgba(0,0,0,0.35); }
-.cn-cover .cn-logo-date { color: rgba(255,255,255,0.35); }
-.cn-logo-tagline { font-size: 11px; color: rgba(255,255,255,0.35); }
+.cn-logo-mark    { font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.55); }
+.cn-logo-date    { font-size: 11px; color: rgba(255,255,255,0.3); }
+.cn-logo-tagline { font-size: 11px; color: rgba(255,255,255,0.28); }
 
 /* SVG 장식 */
 .cn-accent-svg { flex-shrink: 0; }
@@ -424,11 +447,13 @@ body.cn-body { background: #e0e0e0; }
 .cn-briefing-link { font-size: 0.88em; }
 
 @media (max-width: 560px) {
-  .cn-cover-title   { font-size: 20px; }
-  .cn-card-headline { font-size: 18px; }
-  .cn-card-body     { font-size: 13px; }
-  .cn-cta-btn       { font-size: 14px; padding: 10px 18px; }
-  .cn-closing-text  { font-size: 17px; }
+  .cn-card        { padding: 26px 26px 22px; }
+  .cn-cover-title { font-size: 22px; }
+  .cn-card-headline { font-size: 22px; }
+  .cn-card-body   { font-size: 13px; }
+  .cn-cta-btn     { font-size: 14px; padding: 11px 22px; }
+  .cn-closing-text { font-size: 18px; }
+  .cn-card-num    { font-size: 160px; }
 }
 .report-nav { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; }
 

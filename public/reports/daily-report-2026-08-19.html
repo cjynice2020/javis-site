@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="AI 인프라가 실제 표적. MLflow SSRF와 Ray 취약점이 실제 공격에 악용돼 CISA가 악용된 취약점KEV 목록에 등재했고, MS Copilot Personal에서는...">
+<meta property="og:type" content="article">
+<meta property="og:title" content="🛡️ AI보안 데일리 (2026-08-19 (수요일))">
+<meta property="og:description" content="AI 인프라가 실제 표적. MLflow SSRF와 Ray 취약점이 실제 공격에 악용돼 CISA가 악용된 취약점KEV 목록에 등재했고, MS Copilot Personal에서는...">
+<meta property="og:site_name" content="Javis">
+<meta property="og:url" content="https://javis-site.cjynice3378.workers.dev/reports/daily-report-2026-08-19.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="🛡️ AI보안 데일리 (2026-08-19 (수요일))">
+<meta name="twitter:description" content="AI 인프라가 실제 표적. MLflow SSRF와 Ray 취약점이 실제 공격에 악용돼 CISA가 악용된 취약점KEV 목록에 등재했고, MS Copilot Personal에서는...">
+<title>🛡️ AI보안 데일리 (2026-08-19 (수요일)) · Javis</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <h1><a href="../index.html">🛡️ Javis</a></h1>
+    <div class="tag">AI보안 동향 인텔리전스</div>
+  </div>
+</header>
+
+<main class="container">
+  <div class="report-nav"><a href="../index.html">← Javis 목록으로</a></div>
+
+  <div>
+    <span class="badge daily">데일리</span>
+    <span style="color:var(--c-muted); font-size:0.9em; margin-left:6px;">2026-08-19</span>
+  </div>
+
+  <div class="report-actions">
+    <button type="button" id="btn-kakao-share" class="btn-kakao">💬 카카오톡 공유</button>
+    <button type="button" id="btn-copy-url" class="btn-copy">링크 복사</button>
+  </div>
+
+  <article class="report-body">
+<h1 id="ai-2026-08-19">🛡️ AI보안 데일리 (2026-08-19 (수요일))</h1>
+<blockquote>
+<p>AI 인프라가 실제 표적. MLflow SSRF와 Ray 취약점이 실제 공격에 악용돼 CISA가 악용된 취약점(KEV) 목록에 등재했고, MS Copilot Personal에서는 원클릭으로 연결 앱 데이터를 빼내는 결함 3건이 공개됐다.</p>
+</blockquote>
+<hr>
+<h2 id="_1" class="cat-policy">📋 정책·규제</h2>
+<h4 id="1">1. 과기정통부, 독파모 경쟁방식 전면 재검토 [🟡주의]</h4>
+<ul>
+<li><strong>출처</strong>: 디지털데일리 · 2026-08-18 · 🇰🇷 국내</li>
+<li><strong>핵심</strong>: 류제명 과기정통부 2차관이 '독자 AI 파운데이션 모델(독파모)' 프로젝트의 지원 규모·경쟁 방식을 전면 재검토한다고 밝혔다. 자원 분산 지원 방식으로는 글로벌 경쟁이 어렵다는 판단이다.</li>
+<li>🔗 <a href="https://www.ddaily.co.kr/page/view/2026081812303433087" target="_blank" rel="noopener noreferrer">https://www.ddaily.co.kr/page/view/2026081812303433087</a></li>
+</ul>
+<h4 id="2-ai-6">2. '모두의 AI' 공모 마감…6개 컨소시엄 경쟁 [🔵참고]</h4>
+<ul>
+<li><strong>출처</strong>: 디지털데일리 · 2026-08-18 · 🇰🇷 국내</li>
+<li><strong>핵심</strong>: 과기정통부 공공 AI 서비스 '모두의 AI' 사업 공모에 SK텔레콤·KT·카카오·이스트소프트 등 6개 사업자(컨소시엄)가 제안서를 제출했다.</li>
+<li>🔗 <a href="https://www.ddaily.co.kr/page/view/2026081819270893411" target="_blank" rel="noopener noreferrer">https://www.ddaily.co.kr/page/view/2026081819270893411</a></li>
+</ul>
+<h4 id="3-ai-175">3. 중기부, AI·디지털 사업모델 175개사 선정 [🔵참고]</h4>
+<ul>
+<li><strong>출처</strong>: 디지털데일리 · 2026-08-18 · 🇰🇷 국내</li>
+<li><strong>핵심</strong>: 중기부·기정원이 '2026 중소기업 스마트서비스 사업' 지원대상 175개 기업을 선정했다. 기업당 최대 1억원을 지원한다.</li>
+<li>🔗 <a href="https://www.ddaily.co.kr/page/view/2026081817390745995" target="_blank" rel="noopener noreferrer">https://www.ddaily.co.kr/page/view/2026081817390745995</a></li>
+</ul>
+<hr>
+<h2 id="_2" class="cat-industry">🏭 산업·시장</h2>
+<h4 id="1-ai-virtue-ai">1. 포티넷, AI 보안기업 Virtue AI 인수 [🔵참고]</h4>
+<ul>
+<li><strong>출처</strong>: SecurityWeek · 2026-08-18 · 🌐 국제</li>
+<li><strong>핵심</strong>: 포티넷이 AI 보안기업 Virtue AI를 인수했다. AI 모델·애플리케이션·에이전틱 시스템 보안 포트폴리오 강화에 활용한다.</li>
+<li>🔗 <a href="https://www.securityweek.com/fortinet-acquires-ai-security-company-virtue-ai/" target="_blank" rel="noopener noreferrer">https://www.securityweek.com/fortinet-acquires-ai-security-company-virtue-ai/</a></li>
+</ul>
+<h4 id="2-sk-ai">2. SK쉴더스, 제로트러스트 기반 AI 보안 사업 강화 [🔵참고]</h4>
+<ul>
+<li><strong>출처</strong>: 디지털데일리 · 2026-08-19 · 🇰🇷 국내</li>
+<li><strong>핵심</strong>: SK쉴더스가 AI 에이전트 확산에 따른 비인간주체(NHI) 보안 수요에 대응해 제로트러스트 사업을 강화한다. NHI 거버넌스 지원을 제공한다.</li>
+<li>🔗 <a href="https://www.ddaily.co.kr/page/view/2026081909021617387" target="_blank" rel="noopener noreferrer">https://www.ddaily.co.kr/page/view/2026081909021617387</a></li>
+</ul>
+<h4 id="3">3. 라온시큐어, 업스테이지 '독파모' 컨소시엄 합류 [🔵참고]</h4>
+<ul>
+<li><strong>출처</strong>: 데일리시큐 · 2026-08-19 · 🇰🇷 국내</li>
+<li><strong>핵심</strong>: 라온시큐어가 업스테이지 주도 독파모 최종 컨소시엄에 보안 파트너로 합류해, LLM '솔라(Solar)'에 자사 보안·인증 기술을 결합한 AI 보안 자동화를 공동 실증한다.</li>
+<li>🔗 <a href="https://www.dailysecu.com/news/articleView.html?idxno=208107" target="_blank" rel="noopener noreferrer">https://www.dailysecu.com/news/articleView.html?idxno=208107</a></li>
+</ul>
+<hr>
+<h2 id="_3" class="cat-tech">🔬 기술·위협</h2>
+<h4 id="1-ms-copilot-personal-3">1. MS Copilot Personal, 원클릭 데이터 유출 결함 3건 [🟡주의]</h4>
+<ul>
+<li><strong>출처</strong>: The Hacker News · 2026-08-18 · 🌐 국제</li>
+<li><strong>핵심</strong>: Varonis Threat Labs가 MS Copilot Personal에서 조작된 링크 한 번 클릭으로 연결 앱 데이터를 조용히 탈취할 수 있는 취약점 3건을 공개했다.</li>
+<li>🔗 <a href="https://thehackernews.com/2026/08/microsoft-copilot-personal-flaws-could.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/08/microsoft-copilot-personal-flaws-could.html</a></li>
+</ul>
+<h4 id="2-ai">2. AI발 취약점 급증에 전통적 패치 모델 한계 [🟡주의]</h4>
+<ul>
+<li><strong>출처</strong>: SecurityWeek · 2026-08-18 · 🌐 국제</li>
+<li><strong>핵심</strong>: Rapid7은 취약점 공개 급증과 악용 속도 가속으로 기존 패치 주기가 이를 따라가지 못한다며, 심각도 점수보다 노출도 기반 우선순위 대응을 강조했다.</li>
+<li>🔗 <a href="https://www.securityweek.com/ai-driven-vulnerability-surge-breaks-the-traditional-patching-model/" target="_blank" rel="noopener noreferrer">https://www.securityweek.com/ai-driven-vulnerability-surge-breaks-the-traditional-patching-model/</a></li>
+</ul>
+<hr>
+<h2 id="_4" class="cat-incident">🚨 사고·사건</h2>
+<h4 id="1-mlflow-ssrf">1. MLflow SSRF 취약점, 클라우드 자격증명 탈취에 악용 [🔴위급]</h4>
+<ul>
+<li><strong>출처</strong>: The Hacker News · 2026-08-18 · 🌐 국제</li>
+<li><strong>핵심</strong>: 공격자가 오픈소스 AI 플랫폼 MLflow의 SSRF 취약점을 악용해 클라우드 자격증명·시크릿을 탈취하고 있다. OT용 FUXA SCADA/HMI 취약점도 함께 보고됐다.</li>
+<li>🔗 <a href="https://thehackernews.com/2026/08/attackers-exploit-mlflow-ssrf-flaw-to.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/08/attackers-exploit-mlflow-ssrf-flaw-to.html</a></li>
+</ul>
+<h4 id="2-cisa-ray-kev">2. CISA, 실제 악용 중인 Ray 취약점 KEV 등재 [🔴위급]</h4>
+<ul>
+<li><strong>출처</strong>: The Hacker News · 2026-08-18 · 🌐 국제</li>
+<li><strong>핵심</strong>: 미국 CISA가 AI 컴퓨팅 프레임워크 Ray의 심각한 취약점을 악용된 취약점(KEV) 목록에 추가했다. 브라우저 기반 원격코드실행(RCE)을 유발할 수 있으며 실제 악용 정황이 확인됐다.</li>
+<li>🔗 <a href="https://thehackernews.com/2026/08/cisa-flags-actively-exploited-ray-flaw.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/08/cisa-flags-actively-exploited-ray-flaw.html</a></li>
+</ul>
+<hr>
+<h2 id="_5" class="cat-research">📚 연구·학술</h2>
+<h4 id="1-ai">1. AI 에이전트 간 전파되는 '마인드 바이러스' 실증 [🔵참고]</h4>
+<ul>
+<li><strong>출처</strong>: The Hacker News (Anthropic·EPFL 연구) · 2026-08-18 · 🌐 국제</li>
+<li><strong>핵심</strong>: 앤트로픽과 스위스 EPFL 연구진이 편집 가능한 시스템·프롬프트 파일을 통해 자가 전파 페이로드가 한 AI 에이전트에서 다음 에이전트로 확산될 수 있음을 시연했다.</li>
+<li>🔗 <a href="https://thehackernews.com/2026/08/ai-mind-viruses-can-spread-between.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/08/ai-mind-viruses-can-spread-between.html</a></li>
+</ul>
+<hr>
+<h2 id="_6">🔤 오늘의 정보보호 단어</h2>
+<h4 id="1-ssrf-server-side-request-forgery">단어 1: <strong>SSRF (Server-Side Request Forgery, 서버측 요청 위조)</strong></h4>
+<blockquote>
+<p>공격자가 서버를 속여 내부 시스템에 대신 요청을 보내게 만드는 기법. 오늘 MLflow 사고처럼 클라우드 내부 자격증명을 빼내는 데 쓰인다.</p>
+</blockquote>
+<h4 id="2-prompt-injection">단어 2: <strong>프롬프트 인젝션 (Prompt Injection)</strong></h4>
+<blockquote>
+<p>AI에게 몰래 숨긴 명령을 주입해 원래 지시를 무시하고 공격자가 원하는 행동을 하게 만드는 수법. 오늘 '마인드 바이러스' 실증의 핵심 원리다.</p>
+</blockquote>
+<h4 id="3-nhi-non-human-identity">단어 3: <strong>NHI (Non-Human Identity, 비인간 주체)</strong></h4>
+<blockquote>
+<p>사람이 아닌 AI 에이전트·프로그램이 시스템에 접근할 때 부여받는 신원. 권한 관리가 허술하면 과도한 접근 권한이 새로운 보안 구멍이 된다.</p>
+</blockquote>
+  </article>
+
+  <section class="comments-section">
+    <h2>💬 댓글</h2>
+    <div id="comments-root"></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div>Javis · 자동 생성 · 2026-08-19 09:22 빌드</div>
+</footer>
+
+<script>window.JAVIS_CONFIG = {"kakao_app_key": "95156bbd850b502f76b32582a0ad74af", "share_image": "", "turnstile_site_key": "", "comments_api_base": "https://javis-site.cjynice3378.workers.dev"};</script>
+<script src="../assets/share.js"></script>
+<script src="../assets/comments.js"></script>
+</body>
+</html>

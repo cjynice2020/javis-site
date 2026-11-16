@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="이번 주 가장 큰 흐름은 AI 인프라를 노린 공급망 연쇄 침해입니다. 지난달 시작된 Fireworks AI 침해가 고객 데이터셋·모델 가중치까지 확대됐고, 여기서 유출된 접근...">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI보안 주간 동향 리포트 (2026-11-10 ~ 2026-11-16)">
+<meta property="og:description" content="이번 주 가장 큰 흐름은 AI 인프라를 노린 공급망 연쇄 침해입니다. 지난달 시작된 Fireworks AI 침해가 고객 데이터셋·모델 가중치까지 확대됐고, 여기서 유출된 접근...">
+<meta property="og:site_name" content="Javis">
+<meta property="og:url" content="https://javis-site.cjynice3378.workers.dev/reports/weekly-report-2026-11-16.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AI보안 주간 동향 리포트 (2026-11-10 ~ 2026-11-16)">
+<meta name="twitter:description" content="이번 주 가장 큰 흐름은 AI 인프라를 노린 공급망 연쇄 침해입니다. 지난달 시작된 Fireworks AI 침해가 고객 데이터셋·모델 가중치까지 확대됐고, 여기서 유출된 접근...">
+<title>AI보안 주간 동향 리포트 (2026-11-10 ~ 2026-11-16) · Javis</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <h1><a href="../index.html">🛡️ Javis</a></h1>
+    <div class="tag">AI보안 동향 인텔리전스</div>
+  </div>
+</header>
+
+<main class="container">
+  <div class="report-nav"><a href="../index.html">← Javis 목록으로</a></div>
+
+  <div>
+    <span class="badge weekly">위클리</span>
+    <span style="color:var(--c-muted); font-size:0.9em; margin-left:6px;">2026-11-16</span>
+  </div>
+
+  <div class="report-actions">
+    <button type="button" id="btn-kakao-share" class="btn-kakao">💬 카카오톡 공유</button>
+    <button type="button" id="btn-copy-url" class="btn-copy">링크 복사</button>
+  </div>
+
+  <article class="report-body">
+<h1 id="ai-2026-11-10-2026-11-16">AI보안 주간 동향 리포트 (2026-11-10 ~ 2026-11-16)</h1>
+<blockquote>
+<p>작성일: 2026-11-16 · 수집: RSS 9개 출처 315건(2개 피드 오류) → 7일 윈도우 290건 → 키워드 hit 76건 → 트리아지 후 관련 기사 33건 (카테고리별 묶음 포함)</p>
+</blockquote>
+<h2 id="_1">요약</h2>
+<p>이번 주 가장 큰 흐름은 <strong>AI 인프라를 노린 공급망 연쇄 침해</strong>입니다. 지난달 시작된 Fireworks AI 침해가 고객 데이터셋·모델 가중치까지 확대됐고, 여기서 유출된 접근 키로 Cursor 마켓플레이스의 공식 Claude Code 확장이 트로이목마화됐습니다. 오픈소스 추론 엔진 SGLang의 원격코드실행 취약점으로 NEAR AI 추론 서버가 뚫렸고, Railway에서는 고객이 저장한 AI 제공사 키가 탈취돼 약 74만 달러가 부정 사용됐습니다. 북한은 딥페이크 화상통화로 18개월간 4억 달러 이상의 암호화폐를 빼앗은 것으로 FBI가 확인했고, 라자루스 연계 조직이 PHP2Shell 취약점으로 국내 정부·금융 서버 30곳을 겨냥한 정황도 나왔습니다. 국내에서는 메타엠(코인원 상담 수탁사)·한국조폐공사 '착'·금융보안원 등 침해사고가 이어졌고, 세무사 시험 수석 합격자의 생성형 AI 부정행위 자백으로 청와대가 국가자격시험 전수조사에 착수했습니다.</p>
+<ul>
+<li>위급 🔴 12건 · 주의 🟡 12건 · 참고 🔵 9건 (정책 4 · 산업 7 · 기술 5 · 사고·사건 16 · 연구 1)</li>
+</ul>
+<hr>
+<h2 id="_2" class="cat-policy">정책</h2>
+<h3 id="ai">🟡 [정책] 🇰🇷 청와대, 'AI 활용 부정시험' 긴급대책회의…국가자격시험 전수조사</h3>
+<ul>
+<li>출처: ZDNet Korea·디지털데일리·AI타임스 | 2026-11-15</li>
+<li>제63회 세무사 시험 수석 합격자가 초소형 카메라와 생성형 AI로 세무사 1·2차와 공인회계사 1차 시험에서 부정행위를 했다고 자백하고 경찰에 자수했습니다. 청와대는 정책실장 주재 긴급대책회의를 열어 국가자격시험 전반 전수조사와 수능 AI 기기 점검 절차 마련, 시험장 감독 강화를 결정했습니다.</li>
+<li>So What: ① 생성형 AI와 소형 기기 결합이 대면 감독 환경까지 무력화 ② 시험장 전파·기기 탐지 등 기술적 통제 방안 검토 요청 가능성 ③ 수능(11/19) 이후 후속 제도 개선안 추적</li>
+</ul>
+<h3 id="4047-580-it">🟡 [정책] 🇰🇷 금융위, 금융권 침해사고 40건·47만 건 유출 집계…금융사 580곳 외부 IT자산 점검</h3>
+<ul>
+<li>출처: 데일리시큐 | 2026-11-13</li>
+<li>9월 30일부터 11월 3일까지 금융회사 37곳에서 침해사고 40건이 신고돼 고객·임직원 정보 약 47만 3천 건이 유출되고, 일부 가상자산거래소·전자금융업체에서 약 10억 원 규모 자금 탈취가 발생했습니다. 금융당국은 금융 관련 회사 580여 곳의 외부 노출 IT 자산을 점검하기로 했습니다.</li>
+<li>So What: ① 금융권 공격 표면 관리 부실이 수치로 확인 ② KISA 침해사고 신고 통계와 교차 분석·공동 대응 필요 ③ 점검 결과 공개 시점과 후속 규제 추적</li>
+</ul>
+<h3 id="ms-365">🟡 [정책] 🇰🇷 과기정통부, MS 365 글로벌 장애 비상대응반 가동</h3>
+<ul>
+<li>출처: 디지털데일리·AI타임스 | 2026-11-13~15</li>
+<li>11월 12일 시작된 MS 365(아웃룩·팀즈·코파일럿) 장애가 약 36시간 이어지며 챗GPT·클로드의 MS 365 업무 연동 기능까지 연쇄 오류가 났습니다. 과기정통부는 한국MS와 비상대응반을 꾸려 국내 피해를 점검했으며, MS는 사이버 공격이나 AI 문제가 아닌 과거 네트워크 용량 업그레이드에서 잠재된 결함이 원인이라고 밝혔습니다.</li>
+<li>So What: ① 단일 클라우드 장애가 AI 에이전트 연동 업무까지 전파되는 의존성 확인 ② 공공 클라우드·AI 서비스 장애 대응 체계(대체 수단) 점검 ③ MS 사후 분석 보고서 공개 여부 추적</li>
+</ul>
+<h3 id="gpu-26">🔵 [정책] 🇰🇷 과기정통부, 젠슨 황 사임 후 엔비디아와 긴급점검…GPU 26만 장 공급 유지 재확인</h3>
+<ul>
+<li>출처: 디지털데일리 | 2026-11-14</li>
+<li>배경훈 부총리는 엔비디아 CEO 교체와 무관하게 한국에 대한 GPU 26만 장 공급과 정부 GPU 5만 장 확보가 계획대로 진행된다고 밝혔습니다.</li>
+</ul>
+<hr>
+<h2 id="_3" class="cat-industry">산업</h2>
+<h3 id="ai-ai-gpt">🟡 [산업] 🌐 오픈AI, AI 에이전트가 대신 결제하는 '챗GPT 월렛' 출시</h3>
+<ul>
+<li>출처: AI타임스 | 2026-11-14</li>
+<li>아메리칸 익스프레스·마스터카드·비자와 협력해 실제 카드번호를 AI에 노출하지 않고 생체인증으로 결제하는 방식이며, 미국 거주 챗GPT 프로 가입자부터 제공합니다.</li>
+<li>So What: ① AI 에이전트가 결제 권한을 갖는 구조가 상용화 단계로 진입 ② 에이전트 권한 위임·인증 보안 가이드 마련 필요성 검토 ③ 국내 결제사·플랫폼의 유사 서비스 도입 추적</li>
+</ul>
+<h3 id="vdi-ai-ai">🟡 [산업] 🔀 옴니사, VDI를 'AI 에이전트 안전 실행 환경'으로 확장…AI 권한 통제 신제품 '엘라라'</h3>
+<ul>
+<li>출처: 디지털데일리 | 2026-11-15</li>
+<li>옛 VM웨어 EUC 사업부인 옴니사가 호라이즌 VDI를 AI 에이전트 격리 실행 공간으로 확장하고, 신제품 엘라라로 AI의 작업 권한을 통제하는 전략을 내세웠습니다.</li>
+<li>So What: ① 에이전트 격리·권한 통제가 가상화 시장의 핵심 기능으로 부상 ② 공공 AI 에이전트 도입 시 실행 환경 분리 요건 검토 ③ 국내 공공 VDI 사업에서 AI 통제 기능 반영 동향 추적</li>
+</ul>
+<h3 id="_4">🔵 [산업] 🌐 앤트로픽, 제조업용 '클로드 포 매뉴팩처링' 출시</h3>
+<ul>
+<li>출처: AI타임스 | 2026-11-13</li>
+<li>견적·품질 검사·설비 고장 분석 등 17개 스킬과 오토데스크 퓨전·MS 365 연동을 제공하며, 의료·금융·법률에 이어 산업별 제품을 확대했습니다.</li>
+</ul>
+<h3 id="ipo-itar">🔵 [산업] 🌐 앤트로픽 IPO, ITAR 근거로 중국·홍콩 투자자 공모주 배정 제한</h3>
+<ul>
+<li>출처: AI타임스 | 2026-11-14</li>
+<li>블룸버그에 따르면 일부 투자은행이 미국 국제무기거래규정(ITAR)을 근거로 중국·홍콩 기관 주문을 거절하고 있습니다. 아모데이 CEO는 컴퓨팅 수요 예측을 최대 경영 난제로 꼽으며 IPO 목적이 컴퓨팅 투자 자금 확보라고 밝혔습니다.</li>
+</ul>
+<h3 id="ceo-ai">🔵 [산업] 🌐 젠슨 황 엔비디아 CEO 퇴임…AI 산업 자금줄 변화 우려</h3>
+<ul>
+<li>출처: AI타임스 | 2026-11-13</li>
+<li>콜레트 크레스 CFO가 임시 CEO를 맡았으며, 오픈AI 등에 대한 엔비디아의 공격적 투자 전략 유지 여부가 관심사입니다.</li>
+</ul>
+<h3 id="ai-mcp-ai-mcp-cms-ai-ai">🔵 [산업] 🇰🇷 국내 AI 에이전트·MCP 연동 확산 — 뉴엔AI '퀘타아이 MCP', 하나은행 CMS AI, 형사정책연구원 범죄통계 AI</h3>
+<ul>
+<li>출처: 디지털데일리 | 2026-11-15~16</li>
+<li>챗GPT·클로드에서 MCP로 외부 데이터를 바로 쓰는 서비스와 금융·공공 시스템에 LLM 에이전트를 결합하는 시범사업이 잇따랐습니다. MCP 서버·에이전트 권한 관리가 국내에서도 실무 보안 과제가 되고 있습니다.</li>
+</ul>
+<h3 id="ai_1">🔵 [산업] 🔀 시스코 혁신 책임자 "한국, AI 투자만으론 부족…보안 내재화·인재 함께 키워야"</h3>
+<ul>
+<li>출처: ZDNet Korea | 2026-11-15</li>
+<li>소버린 AI·국가 컴퓨팅 인프라 투자에 보안을 설계 단계부터 내재화해야 한다고 강조했습니다.</li>
+</ul>
+<hr>
+<h2 id="_5" class="cat-tech">기술</h2>
+<h3 id="sw-sapms">🔴 [기술] 🌐 핵심 인프라 SW 치명 취약점 무더기 패치 — 아파치·포티넷·SAP·시트릭스·MS 등</h3>
+<ul>
+<li>출처: 데일리시큐·The Hacker News | 2026-11-10~13</li>
+<li>아파치 HTTP 서버 mod_http2 원격코드실행(CVE-2026-119618, 2.4.55~2.4.70, 2.4.71에서 수정), 포티넷 98건(CVE-2026-126170 CVSS 9.8 등 치명 19건), SAP CVSS 10.0 4건, 시트릭스 넷스케일러 기본 설정 영향 메모리 결함(CVE-2026-120868, 9.3), Zoom Workplace(9.6), PostgreSQL 52건(22년 된 인증 RCE), Red Hat Quay 비공개 이미지 열람·변조, Git 재귀 클론 코드 실행, MongoDB 사전인증 크래시, PTC Windchill(9.2)이 공개됐습니다. MS는 이달 1,259건을 패치했고 그중 Outlook NTLMv2 해시 노출 취약점은 실제 악용됐습니다.</li>
+<li>So What: ① 공공·기업 경계장비와 웹·DB 서버 전반에 긴급 패치 수요 ② KISA 보안 공지·취약 버전 점검 안내 신속 배포 필요 ③ 아파치·포티넷 PoC 공개와 악용 전환 시점 모니터링</li>
+</ul>
+<h3 id="windows-clfs-signdrop-system">🔴 [기술] 🌐 Windows CLFS 'SignDrop' 제로데이 공개 익스플로잇…일반 사용자→SYSTEM 권한</h3>
+<ul>
+<li>출처: The Hacker News | 2026-11-12</li>
+<li>지난해 clfs.sys에 추가된 로그 인증 기능을 악용해 로컬 사용자가 SYSTEM 권한을 얻는 PoC가 공개됐습니다. 패치 전 공개된 제로데이입니다.</li>
+<li>So What: ① 초기 침투 후 권한 상승 단계에 즉시 활용 가능 ② 엔드포인트 탐지 규칙·임시 완화책 안내 검토 ③ MS 긴급 패치 여부 추적</li>
+</ul>
+<h3 id="typoprompting-ai-186-clickfix">🟡 [기술] 🌐 'TypoPrompting' — AI 도구 위장 가짜 도메인 186개, ClickFix·브라우저 악성코드 유포</h3>
+<ul>
+<li>출처: The Hacker News | 2026-11-12</li>
+<li>Island 연구진이 AI 앱을 흉내 낸 유사 도메인이 ClickFix형 미끼, 브라우저 하이재킹 악성코드, 검색 탈취 확장 프로그램을 유포하는 데 쓰이고 있다고 밝혔습니다.</li>
+<li>So What: ① 생성형 AI 이용 확산이 피싱 미끼로 직결 ② 국내 유사 도메인 탐지·차단 목록 공유 검토 ③ 한글 AI 서비스 사칭 도메인 출현 모니터링</li>
+</ul>
+<h3 id="openai-codex-ms">🟡 [기술] 🌐 OpenAI Codex 백도어 위험·MS '모델 가중치 백도어' 경고</h3>
+<ul>
+<li>출처: SecurityWeek | 2026-11-13</li>
+<li>주간 단신에서 Codex 백도어 위험과 MS의 모델 가중치 백도어 경고가 함께 보도됐습니다. AI 모델·에이전트 자체가 공급망 공격 경로가 되는 흐름입니다.</li>
+<li>So What: ① 외부 모델·가중치 도입 시 무결성 검증 필요성 확대 ② 공공 AI 모델 도입 가이드에 출처·서명 검증 항목 반영 검토 ③ MS 원문 기술 보고서 확인</li>
+</ul>
+<h3 id="google">🟡 [기술] 🌐 캘린더 초대+실시간 프록시로 Google 세션 탈취 — 링크 검사 모두 우회</h3>
+<ul>
+<li>출처: The Hacker News | 2026-11-12</li>
+<li>8월 중순부터 기업 사용자의 실시간 Google 세션을 탈취해 온 피싱 조직이 방어 측 링크 검사를 모두 통과하도록 설계했다고 Material Security가 밝혔습니다.</li>
+<li>So What: ① MFA를 우회하는 세션 탈취형 피싱 고도화 ② 세션 토큰 수명·이상 로그인 탐지 정책 점검 ③ 국내 기업 대상 유사 캠페인 확인</li>
+</ul>
+<hr>
+<h2 id="_6" class="cat-incident">사고·사건</h2>
+<h3 id="fireworks-ai-cursor-claude-code">🔴 [사고·사건] 🌐 Fireworks AI 침해 확대 → 유출 키로 Cursor 마켓의 Claude Code 확장 트로이목마화</h3>
+<ul>
+<li>출처: The Hacker News | 2026-11-10, 11-15</li>
+<li>Fireworks AI는 10월 공지한 침해 조사에서 계정·결제 정보와 시크릿, 데이터셋, 미완성 모델 가중치, Notion AI 대화까지 영향이 확대됐다고 밝혔습니다. Cursor는 Fireworks에 발급했던 접근 키가 이 침해로 노출됐고, 공격자가 이를 이용해 Cursor 확장 마켓플레이스의 공식 Claude Code 확장을 변조했다고 설명했습니다.</li>
+<li>So What: ① AI 추론 제공사 한 곳의 침해가 개발 도구 공급망으로 연쇄 확산 ② 개발 환경의 AI 확장 설치 이력·버전 점검 권고 검토 ③ 영향받은 확장 버전과 2차 피해 공개 추적</li>
+</ul>
+<h3 id="sglang-near-ai-18-100">🔴 [사고·사건] 🌐 SGLang 원격코드실행으로 NEAR AI 추론 서버 침해…에이전트 18개·사용자 약 100명 데이터 유출</h3>
+<ul>
+<li>출처: The Hacker News | 2026-11-11</li>
+<li>오픈소스 추론 엔진 SGLang의 RCE 취약점이 악용돼 공격자가 NEAR AI 추론 서버에서 코드를 실행했고, 기밀 모드로 처리된 요청까지 볼 수 있었습니다.</li>
+<li>So What: ① 오픈소스 LLM 서빙 스택이 직접 공격 대상 ② 국내 SGLang·vLLM 등 추론 서버 노출 현황 점검 필요 ③ SGLang 패치 버전·추가 피해 기관 추적</li>
+</ul>
+<h3 id="railway-ai-74">🔴 [사고·사건] 🌐 Railway, 고객 저장 AI 키 탈취로 약 74만 달러 부정 사용</h3>
+<ul>
+<li>출처: The Hacker News | 2026-11-11</li>
+<li>10월 침해로 고객이 Railway에 저장한 AI 제공사 키가 탈취돼 부정 사용됐으며, Railway는 AI 제공사가 환불하지 않으면 자체 부담하겠다고 밝혔습니다.</li>
+<li>So What: ① AI API 키가 즉시 현금화되는 공격 표적으로 정착 ② PaaS·CI에 저장된 AI 키 사용량 한도·순환 정책 권고 ③ 유사 'LLMjacking' 사례 모니터링</li>
+</ul>
+<h3 id="antifox-aws">🔴 [사고·사건] 🌐 에이전틱 펜테스트 플랫폼 'AntiFox', 실제 침입에 악용…AWS 운영 시크릿 탈취</h3>
+<ul>
+<li>출처: The Hacker News | 2026-11-11</li>
+<li>AntiFox를 호스팅한 알리바바 클라우드 시스템이 여러 침입에서 AWS 자격증명 탈취와 내부 이동에 쓰인 사실이 공개됐습니다.</li>
+<li>So What: ① AI 공격 자동화 도구가 실제 침해에 투입된 확인 사례 ② 클라우드 자격증명 이상 사용 탐지 강화 필요 ③ 공격 IoC 국내 공유</li>
+</ul>
+<h3 id="fbi-18-4">🔴 [사고·사건] 🌐 FBI "북한, 딥페이크 화상통화로 18개월간 암호화폐 4억 달러 이상 탈취"</h3>
+<ul>
+<li>출처: The Hacker News | 2026-11-13</li>
+<li>'FaceStealer'로 명명된 사회공학 작전에서 딥페이크 영상통화로 피해자를 속여 자금을 빼돌렸으며, 미 법무부·FBI는 탈취 자금 압류에 나섰습니다.</li>
+<li>So What: ① 생성형 AI 딥페이크가 국가배후 금융 공격의 주력 수단 ② 국내 가상자산 업계 대상 화상 인증 절차 보완 권고 검토 ③ 국내 피해 사례 여부 확인</li>
+</ul>
+<h3 id="php2shell-30">🔴 [사고·사건] 🔀 북한 라자루스 연계 조직, PHP2Shell로 국내 정부·금융 서버 30곳 표적…체크포인트 게이트웨이에도 백도어</h3>
+<ul>
+<li>출처: ZDNet Korea·The Hacker News | 2026-11-13~15</li>
+<li>사이퍼마는 라자루스 연계 공격자가 PHP 런타임 RCE 취약점 2건(CVE-2026-109618/109619)으로 한국 포함 전 세계 서버를 노렸고 국내 표적 30곳 명단이 확인됐다고 밝혔습니다. 별도로 미패치 체크포인트 게이트웨이가 PHP2Shell과 Gaia OS 권한 상승으로 TSGA 백도어에 감염됐고 ESXi 파일 삭제까지 이어졌습니다.</li>
+<li>So What: ① 국내 공공·금융 서버 직접 표적 ② 표적 기관 대상 PHP 패치·침해 흔적 점검 지원 ③ 추가 표적 명단·IoC 공유 추적</li>
+</ul>
+<h3 id="_7">🔴 [사고·사건] 🇰🇷 고객상담 수탁사 메타엠 해킹 → 코인원 이용자 주민번호·계좌번호 등 유출</h3>
+<ul>
+<li>출처: 데일리시큐·ZDNet Korea | 2026-11-15</li>
+<li>메타엠은 11월 12일 상담 서비스 장애로 침해를 인지했고 그 이전부터 비정상 접근이 있었던 사실을 확인해 13일 KISA에 신고했습니다. 고객사 코인원은 상담 과정에서 제공된 이름·전화번호·주민등록번호·계좌번호·가상자산 지갑주소 등이 조회·유출됐다고 공지했습니다.</li>
+<li>So What: ① 수탁사 한 곳의 침해가 다수 고객사로 확산되는 구조 ② 다른 메타엠 고객사 피해 범위 확인과 수탁사 보안관리 점검 ③ 2차 피싱·계정 탈취 시도 모니터링</li>
+</ul>
+<h3 id="3083">🔴 [사고·사건] 🇰🇷 한국조폐공사 지역사랑상품권 '착' 해킹…3,083명 금융정보 포함 유출</h3>
+<ul>
+<li>출처: 데일리시큐 | 2026-11-15</li>
+<li>11월 13일 비정상 접근을 발견해 차단했으며 이름·생년월일·휴대전화번호와 계좌번호, 암호화된 카드번호가 무단 조회됐습니다. KISA 등에 신고하고 침해 경로를 조사 중입니다.</li>
+<li>So What: ① 공공기관 운영 결제 플랫폼 침해 ② 공공 결제 플랫폼 접근통제·조회 이상 탐지 점검 ③ 침해 경로 조사 결과 확인</li>
+</ul>
+<h3 id="_8">🔴 [사고·사건] 🇰🇷 금융보안 전담기관 금융보안원도 해킹 피해</h3>
+<ul>
+<li>출처: 디지털데일리 | 2026-11-14</li>
+<li>금융보안원이 해킹 공격을 받았으나 민감 정보는 유출되지 않았다고 밝혔습니다.</li>
+<li>So What: ① 보안 전담기관까지 표적화 ② 보안기관 간 침해 정보 신속 공유 체계 점검 ③ 공격 주체·경로 공개 여부 추적</li>
+</ul>
+<h3 id="broadworksunrealircdcisa-kev-xen-orchestra-ahsaycbs-qlik-sense">🔴 [사고·사건] 🌐 패치 공개된 취약점 실제 악용 잇따라 — 시스코 BroadWorks·UnrealIRCd(CISA KEV), Xen Orchestra, AhsayCBS, Qlik Sense</h3>
+<ul>
+<li>출처: The Hacker News | 2026-11-10~14</li>
+<li>CISA가 시스코 BroadWorks·Openwave와 UnrealIRCd 취약점을 KEV 목록에 추가했고, Xen Orchestra 인증 우회(VSA-2026-062)와 AhsayCBS 체인(CVE-2026-105133/105134)이 실제 공격에 쓰였습니다.</li>
+<li>So What: ① 패치 공개 후에도 미적용 자산이 계속 공격됨 ② KEV 등재 취약점 국내 노출 자산 점검 안내 ③ 국내 악용 사례 확인</li>
+</ul>
+<h3 id="1281">🟡 [사고·사건] 🇰🇷 대구한의대 연구행정통합시스템 해킹…개인정보 1,281건 유출</h3>
+<ul>
+<li>출처: 데일리시큐 | 2026-11-15</li>
+<li>연구자·교직원·학생의 직번·학번·성명·부서명 등이 유출됐고 30건에는 생년월일이 포함됐습니다. 대학은 시스템을 중단하고 KISA·교육부에 자료를 제출했습니다.</li>
+<li>So What: ① 대학 연구행정 시스템의 취약성 확인 ② 교육기관 대상 웹 시스템 점검 연계 ③ 침해 경로 조사 결과 확인</li>
+</ul>
+<h3 id="apify">🟡 [사고·사건] 🌐 웹 스크래핑 기업 Apify, 고객 계정·저장 데이터 무단 접근 확인</h3>
+<ul>
+<li>출처: SecurityWeek | 2026-11-13</li>
+<li>AI 학습·에이전트용 데이터 수집에 널리 쓰이는 플랫폼에서 고객 개인정보와 저장 데이터가 접근됐습니다.</li>
+<li>So What: ① AI 데이터 공급 플랫폼도 공급망 위험 지점 ② 외부 스크래핑 플랫폼 이용 시 저장 데이터·토큰 관리 점검 ③ 영향 범위 공개 추적</li>
+</ul>
+<h3 id="msp-screenconnect-48-288-n-central-rce">🟡 [사고·사건] 🌐 MSP 원격관리 도구 연쇄 공격 — ScreenConnect 48개 조직 288대, N-central 패치 서버도 RCE</h3>
+<ul>
+<li>출처: The Hacker News | 2026-11-12~13</li>
+<li>ConnectWise는 무단 접근 보고 이후 서드파티 확장 5개를 비활성화했고, N-able은 패치된 N-central 서버에도 통하는 신규 익스플로잇 공개에 일부 기능을 제한했습니다.</li>
+<li>So What: ① MSP 경유 다수 고객사 동시 침해 위험 ② 국내 원격관리 도구 사용 기관 점검 권고 ③ N-able 추가 패치 추적</li>
+</ul>
+<h3 id="turla-cereal-exchange-3-sparrow">🔵 [사고·사건] 🌐 국가배후 첩보 활동 — 러시아 Turla 'Cereal'로 정부 Exchange 메일 탈취, 중국 연계 3개 캠페인 'Sparrow' 생태계로 연결</h3>
+<ul>
+<li>출처: The Hacker News | 2026-11-10</li>
+</ul>
+<h3 id="operation-endgame-gootloadercastleratstealc-640">🔵 [사고·사건] 🌐 국제 공조 'Operation Endgame', Gootloader·CastleRAT·StealC 서버 차단…탈취 로그인 640만 건 압수</h3>
+<ul>
+<li>출처: The Hacker News | 2026-11-13</li>
+</ul>
+<h3 id="faa">🔵 [사고·사건] 🌐 미 FAA 전국 지상정지…당국 "해킹 정황 없어, 소프트웨어 업데이트 조사"</h3>
+<ul>
+<li>출처: SecurityWeek | 2026-11-13~14</li>
+</ul>
+<hr>
+<h2 id="_9" class="cat-research">연구</h2>
+<h3 id="ai-gpt-6-cot">🟡 [연구] 🌐 오픈AI, 'GPT-6 아스트라'의 노-CoT 능력 향상 확인…추론 감시 기반 안전 기법의 한계</h3>
+<ul>
+<li>출처: AI타임스 | 2026-11-13</li>
+<li>오픈AI 정렬 연구팀은 사전학습·모델 구조·강화학습·AI 생성 데이터가 사고의 사슬(CoT) 감시 가능성에 미치는 영향을 분석해, 모델이 추론을 드러내지 않고도 문제를 푸는 능력이 학습 과정에서 커진다고 밝혔습니다.</li>
+<li>So What: ① CoT 모니터링에 의존한 AI 안전 검증의 신뢰도 저하 ② 국내 AI 안전성 평가 체계에 행동 기반 검증 보완 검토 ③ 후속 연구·다른 연구소 재현 결과 추적</li>
+</ul>
+<hr>
+<h2 id="_10">보안기업 동향</h2>
+<blockquote>
+<p>⚠ 캐시 갱신일 2026-10-26 (21일 경과, 권고 주기 14일 초과). <code>AI-Security-CompanyData-Weekly</code> 작업 점검이 필요합니다. 아래 수치는 직전 캐시 기준입니다.</p>
+</blockquote>
+<h3 id="dart">📊 보안기업 동향 (DART 사업보고서)</h3>
+<blockquote>
+<p>캐시 갱신: 2026-10-26 · 비교 범위: 35/37종 (전기 매출 1억+ 종목)</p>
+</blockquote>
+<h4 id="top-3">매출 ↑ TOP 3</h4>
+<ul>
+<li><strong>(주)한컴위드</strong> (054920): 7,712억 ← 4,482억 (▲ 72.1%)</li>
+<li><strong>소프트캠프(주)</strong> (258790): 257억 ← 169억 (▲ 52.3%)</li>
+<li><strong>에스지에이 솔루션즈(주)</strong> (184230): 616억 ← 429억 (▲ 43.6%)</li>
+</ul>
+<h4 id="top-3_1">매출 ↓ TOP 3</h4>
+<ul>
+<li><strong>아이씨티케이 주식회사</strong> (456010): 40.2억 ← 66.8억 (▼ 39.9%)</li>
+<li><strong>(주)노르마</strong> (01505821): 25.3억 ← 36.8억 (▼ 31.4%)</li>
+<li><strong>주식회사 싸이버원</strong> (356890): 337억 ← 479억 (▼ 29.5%)</li>
+</ul>
+<h4 id="top-3_2">영업이익 변동폭 TOP 3 (절댓값 기준)</h4>
+<ul>
+<li><strong>이니텍(주)</strong> (053350): -23.9억 ← 2.3억 (▼ 1,136.9%)</li>
+<li><strong>유한회사 에스에스알</strong> (01469264): 29.3억 ← -5.9억 (▲ 594.6%)</li>
+<li><strong>에스지에이 솔루션즈(주)</strong> (184230): 148억 ← -41.1억 (▲ 461.0%)</li>
+</ul>
+<p><em>출처: 금융감독원 DART OpenAPI. fnlttSinglAcnt 사업보고서(11011) 당기/전기 비교.</em></p>
+<hr>
+<h2 id="_11">보안기업 주가 큰 변동</h2>
+<h3 id="_12">📊 보안기업 주가 큰 변동 + 원인</h3>
+<blockquote>
+<p>윈도우: 2026-11-10 ~ 2026-11-16 · 총 0건 변동 · 매핑 0건 (0%)
+기준: 등락률 ±3% OR 거래량 평균 ×2배. 매핑 윈도우: 변동일 ±1일.</p>
+</blockquote>
+<h4 id="_13">🔍 매핑된 변동</h4>
+<ul>
+<li>해당 주간 매핑된 변동 없음 (주가 캐시에 이번 주 데이터가 없을 가능성이 있어 캐시 갱신 확인 권장)</li>
+</ul>
+<p><em>출처: 한국거래소(KRX) 일별 OHLCV (pykrx) + 1번 직원 동향 + DART 공시 list.json.</em></p>
+<hr>
+<h2 id="_14">하이라이트</h2>
+<ol>
+<li><strong>AI 인프라 공급망 연쇄 침해 (Fireworks AI → Cursor/Claude Code, SGLang → NEAR AI, Railway AI 키)</strong> — 추론 제공사·서빙 엔진·PaaS에 저장된 AI 키가 한 주에 연달아 뚫렸습니다. AI 개발·서빙 스택이 독립된 공격 표면이 됐다는 점에서 공공 AI 도입 보안 가이드에 반영할 근거가 됩니다.</li>
+<li><strong>북한의 AI 활용 금융 공격과 국내 직접 표적화</strong> — 딥페이크 화상통화로 4억 달러 이상 탈취(FBI), 라자루스 연계 PHP2Shell 공격의 국내 정부·금융 30곳 표적 명단이 함께 확인됐습니다.</li>
+<li><strong>국내 침해사고 연쇄 (메타엠·코인원, 조폐공사 '착', 금융보안원, 대구한의대) + 금융권 40건 집계</strong> — 수탁사·공공 결제 플랫폼·보안기관까지 피해가 이어져 KISA 신고 대응과 수탁사 관리 점검 수요가 커졌습니다.</li>
+<li><strong>생성형 AI 부정시험과 정부 전수조사</strong> — AI 악용이 사이버 공간을 넘어 국가 시험 제도 신뢰 문제로 번졌고, 기술적 탐지 대책 요구로 이어질 수 있습니다.</li>
+</ol>
+<hr>
+<h2 id="_15">출처</h2>
+<ul>
+<li><a href="https://thehackernews.com/2026/11/fireworks-ai-breach-widens-to-expose.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/fireworks-ai-breach-widens-to-expose.html</a></li>
+<li><a href="https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html</a></li>
+<li><a href="https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html</a></li>
+<li><a href="https://thehackernews.com/2026/11/railway-says-stolen-customer-ai-keys.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/railway-says-stolen-customer-ai-keys.html</a></li>
+<li><a href="https://thehackernews.com/2026/11/antifox-ai-pentesting-platform-linked.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/antifox-ai-pentesting-platform-linked.html</a></li>
+<li><a href="https://thehackernews.com/2026/11/fbi-says-north-korean-hackers-stole.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/fbi-says-north-korean-hackers-stole.html</a></li>
+<li><a href="https://zdnet.co.kr/view/?no=20261115140951" target="_blank" rel="noopener noreferrer">https://zdnet.co.kr/view/?no=20261115140951</a></li>
+<li><a href="https://thehackernews.com/2026/11/hackers-exploit-php2shell-flaws-in.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/hackers-exploit-php2shell-flaws-in.html</a></li>
+<li><a href="https://www.dailysecu.com/news/articleView.html?idxno=209525" target="_blank" rel="noopener noreferrer">https://www.dailysecu.com/news/articleView.html?idxno=209525</a></li>
+<li><a href="https://zdnet.co.kr/view/?no=20261115131536" target="_blank" rel="noopener noreferrer">https://zdnet.co.kr/view/?no=20261115131536</a></li>
+<li><a href="https://www.dailysecu.com/news/articleView.html?idxno=209533" target="_blank" rel="noopener noreferrer">https://www.dailysecu.com/news/articleView.html?idxno=209533</a></li>
+<li><a href="https://www.ddaily.co.kr/page/view/2026111316514414684" target="_blank" rel="noopener noreferrer">https://www.ddaily.co.kr/page/view/2026111316514414684</a></li>
+<li><a href="https://www.dailysecu.com/news/articleView.html?idxno=209537" target="_blank" rel="noopener noreferrer">https://www.dailysecu.com/news/articleView.html?idxno=209537</a></li>
+<li><a href="https://www.securityweek.com/apify-confirms-customer-data-accessed-in-cyberattack/" target="_blank" rel="noopener noreferrer">https://www.securityweek.com/apify-confirms-customer-data-accessed-in-cyberattack/</a></li>
+<li><a href="https://thehackernews.com/2026/11/screenconnect-attacks-target-at-least.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/screenconnect-attacks-target-at-least.html</a></li>
+<li><a href="https://thehackernews.com/2026/11/new-n-central-exploits-work-against.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/new-n-central-exploits-work-against.html</a></li>
+<li><a href="https://thehackernews.com/2026/11/hackers-exploit-n-central-flaws-to.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/hackers-exploit-n-central-flaws-to.html</a></li>
+<li><a href="https://thehackernews.com/2026/11/sckit-malware-targets-screenconnect.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/sckit-malware-targets-screenconnect.html</a></li>
+<li><a href="https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html</a></li>
+<li><a href="https://thehackernews.com/2026/11/attackers-exploit-unrealircd-flaw-that.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/attackers-exploit-unrealircd-flaw-that.html</a></li>
+<li><a href="https://thehackernews.com/2026/11/hackers-exploit-critical-xen-orchestra.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/hackers-exploit-critical-xen-orchestra.html</a></li>
+<li><a href="https://thehackernews.com/2026/11/attackers-exploit-ahsaycbs-flaws-to.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/attackers-exploit-ahsaycbs-flaws-to.html</a></li>
+<li><a href="https://thehackernews.com/2026/11/hackers-target-qlik-sense-servers-with.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/hackers-target-qlik-sense-servers-with.html</a></li>
+<li><a href="https://thehackernews.com/2026/11/russian-turla-hackers-use-new-cereal.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/russian-turla-hackers-use-new-cereal.html</a></li>
+<li><a href="https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html</a></li>
+<li><a href="https://thehackernews.com/2026/11/operation-endgame-takes-down-gootloader.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/operation-endgame-takes-down-gootloader.html</a></li>
+<li><a href="https://www.securityweek.com/no-signs-of-hacking-in-faa-ground-stop-as-fbi-reportedly-probes-software-update/" target="_blank" rel="noopener noreferrer">https://www.securityweek.com/no-signs-of-hacking-in-faa-ground-stop-as-fbi-reportedly-probes-software-update/</a></li>
+<li><a href="https://www.dailysecu.com/news/articleView.html?idxno=209506" target="_blank" rel="noopener noreferrer">https://www.dailysecu.com/news/articleView.html?idxno=209506</a></li>
+<li><a href="https://thehackernews.com/2026/11/critical-apache-http2-flaw-could-let.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/critical-apache-http2-flaw-could-let.html</a></li>
+<li><a href="https://www.dailysecu.com/news/articleView.html?idxno=209510" target="_blank" rel="noopener noreferrer">https://www.dailysecu.com/news/articleView.html?idxno=209510</a></li>
+<li><a href="https://thehackernews.com/2026/11/sap-patches-four-cvss-100-flaws.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/sap-patches-four-cvss-100-flaws.html</a></li>
+<li><a href="https://www.dailysecu.com/news/articleView.html?idxno=209502" target="_blank" rel="noopener noreferrer">https://www.dailysecu.com/news/articleView.html?idxno=209502</a></li>
+<li><a href="https://thehackernews.com/2026/11/citrix-patches-12-netscaler-and-secure.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/citrix-patches-12-netscaler-and-secure.html</a></li>
+<li><a href="https://thehackernews.com/2026/11/critical-zoom-workplace-flaw-could.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/critical-zoom-workplace-flaw-could.html</a></li>
+<li><a href="https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html</a></li>
+<li><a href="https://thehackernews.com/2026/11/critical-red-hat-quay-flaw-lets.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/critical-red-hat-quay-flaw-lets.html</a></li>
+<li><a href="https://thehackernews.com/2026/11/git-patches-flaw-that-lets-malicious.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/git-patches-flaw-that-lets-malicious.html</a></li>
+<li><a href="https://thehackernews.com/2026/11/critical-pre-auth-mongodb-flaw-cve-2026.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/critical-pre-auth-mongodb-flaw-cve-2026.html</a></li>
+<li><a href="https://thehackernews.com/2026/11/ptc-patches-critical-windchill-and.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/ptc-patches-critical-windchill-and.html</a></li>
+<li><a href="https://thehackernews.com/2026/11/microsoft-patches-1259-flaws-including.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/microsoft-patches-1259-flaws-including.html</a></li>
+<li><a href="https://thehackernews.com/2026/11/new-signdrop-zero-day-exploit-turns.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/new-signdrop-zero-day-exploit-turns.html</a></li>
+<li><a href="https://thehackernews.com/2026/11/186-fake-ai-domains-redirect-users-to.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/186-fake-ai-domains-redirect-users-to.html</a></li>
+<li><a href="https://www.securityweek.com/in-other-news-new-cisa-director-nominee-connected-car-hacking-baker-tilly-data-breach/" target="_blank" rel="noopener noreferrer">https://www.securityweek.com/in-other-news-new-cisa-director-nominee-connected-car-hacking-baker-tilly-data-breach/</a></li>
+<li><a href="https://thehackernews.com/2026/11/calendar-invites-and-live-proxies.html" target="_blank" rel="noopener noreferrer">https://thehackernews.com/2026/11/calendar-invites-and-live-proxies.html</a></li>
+<li><a href="https://zdnet.co.kr/view/?no=20261115205153" target="_blank" rel="noopener noreferrer">https://zdnet.co.kr/view/?no=20261115205153</a></li>
+<li><a href="https://www.ddaily.co.kr/page/view/2026111515214555426" target="_blank" rel="noopener noreferrer">https://www.ddaily.co.kr/page/view/2026111515214555426</a></li>
+<li><a href="https://www.aitimes.com/news/articleView.html?idxno=217426" target="_blank" rel="noopener noreferrer">https://www.aitimes.com/news/articleView.html?idxno=217426</a></li>
+<li><a href="https://www.dailysecu.com/news/articleView.html?idxno=209496" target="_blank" rel="noopener noreferrer">https://www.dailysecu.com/news/articleView.html?idxno=209496</a></li>
+<li><a href="https://www.ddaily.co.kr/page/view/2026111419304217443" target="_blank" rel="noopener noreferrer">https://www.ddaily.co.kr/page/view/2026111419304217443</a></li>
+<li><a href="https://www.ddaily.co.kr/page/view/2026111509573075770" target="_blank" rel="noopener noreferrer">https://www.ddaily.co.kr/page/view/2026111509573075770</a></li>
+<li><a href="https://www.aitimes.com/news/articleView.html?idxno=217394" target="_blank" rel="noopener noreferrer">https://www.aitimes.com/news/articleView.html?idxno=217394</a></li>
+<li><a href="https://www.ddaily.co.kr/page/view/2026111408535993745" target="_blank" rel="noopener noreferrer">https://www.ddaily.co.kr/page/view/2026111408535993745</a></li>
+<li><a href="https://www.aitimes.com/news/articleView.html?idxno=217400" target="_blank" rel="noopener noreferrer">https://www.aitimes.com/news/articleView.html?idxno=217400</a></li>
+<li><a href="https://www.ddaily.co.kr/page/view/2026111408403319685" target="_blank" rel="noopener noreferrer">https://www.ddaily.co.kr/page/view/2026111408403319685</a></li>
+<li><a href="https://www.aitimes.com/news/articleView.html?idxno=217361" target="_blank" rel="noopener noreferrer">https://www.aitimes.com/news/articleView.html?idxno=217361</a></li>
+<li><a href="https://www.aitimes.com/news/articleView.html?idxno=217402" target="_blank" rel="noopener noreferrer">https://www.aitimes.com/news/articleView.html?idxno=217402</a></li>
+<li><a href="https://www.aitimes.com/news/articleView.html?idxno=217401" target="_blank" rel="noopener noreferrer">https://www.aitimes.com/news/articleView.html?idxno=217401</a></li>
+<li><a href="https://www.aitimes.com/news/articleView.html?idxno=217364" target="_blank" rel="noopener noreferrer">https://www.aitimes.com/news/articleView.html?idxno=217364</a></li>
+<li><a href="https://www.ddaily.co.kr/page/view/2026111609034756858" target="_blank" rel="noopener noreferrer">https://www.ddaily.co.kr/page/view/2026111609034756858</a></li>
+<li><a href="https://www.ddaily.co.kr/page/view/2026111609022944753" target="_blank" rel="noopener noreferrer">https://www.ddaily.co.kr/page/view/2026111609022944753</a></li>
+<li><a href="https://www.ddaily.co.kr/page/view/2026111420574725454" target="_blank" rel="noopener noreferrer">https://www.ddaily.co.kr/page/view/2026111420574725454</a></li>
+<li><a href="https://zdnet.co.kr/view/?no=20261115110004" target="_blank" rel="noopener noreferrer">https://zdnet.co.kr/view/?no=20261115110004</a></li>
+<li><a href="https://www.aitimes.com/news/articleView.html?idxno=217369" target="_blank" rel="noopener noreferrer">https://www.aitimes.com/news/articleView.html?idxno=217369</a></li>
+</ul>
+  </article>
+
+  <section class="comments-section">
+    <h2>💬 댓글</h2>
+    <div id="comments-root"></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div>Javis · 자동 생성 · 2026-11-16 09:31 빌드</div>
+</footer>
+
+<script>window.JAVIS_CONFIG = {"kakao_app_key": "95156bbd850b502f76b32582a0ad74af", "share_image": "", "turnstile_site_key": "", "comments_api_base": "https://javis-site.cjynice3378.workers.dev"};</script>
+<script src="../assets/share.js"></script>
+<script src="../assets/comments.js"></script>
+</body>
+</html>
